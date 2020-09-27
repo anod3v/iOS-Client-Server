@@ -10,6 +10,8 @@ import UIKit
 
 class NewsFeedViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var networkService = NetworkService()
+    
     var friends: [Friend] = []
     
     var allPosts: [Post?] = []
@@ -125,6 +127,32 @@ class NewsFeedViewController: UIViewController, UICollectionViewDelegate, UIColl
         RunLoop.main.add(timer, forMode: RunLoop.Mode.default)
         self.navigationController?.tabBarController?.tabBar.isHidden = true
         self.navigationController?.navigationBar.isHidden = true
+        
+        
+        _ = networkService.getUserInfo(userId: Session.shared.userId!, completion: {
+            result in
+            debugPrint(result)
+        })
+        
+        _ = networkService.getUserGroups(userId: Session.shared.userId!, completion: {
+            result in
+            debugPrint(result)
+        })
+        
+        _ = networkService.getUserPhotos(userId: 616595781, completion: {
+            result in
+            debugPrint(result)
+        })
+
+        _ = networkService.getUserFriends(userId: 616595781, completion: {
+            result in
+            debugPrint(result)
+        })
+        
+        _ = networkService.searchGroups(queryText: "music", completion: {
+            result in
+            debugPrint(result)
+        })
         
         //-------
         
