@@ -55,10 +55,10 @@ extension LoginFormController: WKNavigationDelegate {
         
         Session.shared.userId = Int(userId!)
         
-        let newsFeedVC = storyboard?.instantiateViewController(withIdentifier: "NewsFeedViewController") as! NewsFeedViewController
+        let userFriendsVC = storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
         
-        newsFeedVC.modalPresentationStyle = .fullScreen
-        self.present(newsFeedVC, animated: true, completion: nil)
+        userFriendsVC.modalPresentationStyle = .fullScreen
+        self.present(userFriendsVC, animated: true, completion: nil)
         
         decisionHandler(.cancel)
     }

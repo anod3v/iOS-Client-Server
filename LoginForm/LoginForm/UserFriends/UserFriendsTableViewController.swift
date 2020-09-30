@@ -11,6 +11,8 @@ import UIKit
 
 class UserFriendsTableViewController: UITableViewController {
     
+    var networkService = NetworkService()
+    
     var friends: [Friend] = []
     
     var selectedFriend = Friend () // TODO: to find a better way to init?
@@ -58,6 +60,31 @@ class UserFriendsTableViewController: UITableViewController {
         self.view.addSubview(searchFooter)
         
         tableView.reloadData()
+        
+        _ = networkService.getUserInfo(userId: Session.shared.userId!, completion: {
+            (result, error) in
+            debugPrint("the result is:", result)
+        })
+//
+//        _ = networkService.getUserGroups(userId: Session.shared.userId!, completion: {
+//            result in
+//            debugPrint(result)
+//        })
+//
+//        _ = networkService.getUserPhotos(userId: 616595781, completion: {
+//            result in
+//            debugPrint(result)
+//        })
+//
+//        _ = networkService.getUserFriends(userId: 616595781, completion: {
+//            result in
+//            debugPrint(result)
+//        })
+//
+//        _ = networkService.searchGroups(queryText: "music", completion: {
+//            result in
+//            debugPrint(result)
+//        })
         
     }
     

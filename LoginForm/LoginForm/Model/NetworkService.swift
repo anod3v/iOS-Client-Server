@@ -31,8 +31,8 @@ class NetworkService {
         
     }
     
-    func getUserInfo(userId: Int, completion: @escaping (Any?) -> Void) {
-
+    func getUserInfo(userId: Int, completion: @escaping (User?, Error?) -> Void) {
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -53,22 +53,38 @@ class NetworkService {
             URLQueryItem(name: "v", value: "5.68")
         ]
         
-        debugPrint("urlConstructor.url!:", urlConstructor.url!)
+        let decoder = JSONDecoder()
+        
+//        debugPrint("urlConstructor.url!:", urlConstructor.url!)
         
         // задача для запуска
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            completion(json)
+            
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+            debugPrint("jsonData:", jsonData)
+            
+            guard let dataResponse = data, error == nil else {
+                debugPrint(error?.localizedDescription ?? "Response Error")
+                return }
+            
+            do {
+                
+                let result = try decoder.decode(User.self, from: dataResponse)
+                completion(result, nil)
+                
+            } catch(let error) {
+                
+                completion(nil, error)
+            }
         }
-        // запускаем задачу
+        
         task.resume()
         
         //-----
     }
     
     func getUserGroups(userId: Int, completion: @escaping (Any?) -> Void) {
-
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -88,7 +104,7 @@ class NetworkService {
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
-
+        
         
         // задача для запуска
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
@@ -135,7 +151,7 @@ class NetworkService {
             let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
             
             completion(json)
-
+            
         }
         // запускаем задачу
         task.resume()
@@ -170,7 +186,7 @@ class NetworkService {
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
             // в замыкании данные, полученные от сервера, мы преобразуем в json
             let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-
+            
             completion(json)
         }
         // запускаем задачу
@@ -181,7 +197,7 @@ class NetworkService {
     
     func getUserFriends(userId: Int, completion: @escaping (Any?) -> Void) {
         //-----
-
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -212,6 +228,33 @@ class NetworkService {
         task.resume()
         
         //-----
+    }
+    
+    struct User: Decodable {
+        let id: Int
+        let first_name: String
+        let last_name: String
+        let bdate: String
+        
+        init(from decoder: Decoder) throws {
+            let values = try decoder.container(keyedBy: CodingKeys.self)
+            self.id = try values.decode(Int.self, forKey: .id)
+            self.first_name = try values.decode(String.self, forKey: .first_name)
+            self.last_name = try values.decode(String.self, forKey: .last_name)
+            self.bdate = try values.decode(String.self, forKey: .bdate)
+            //
+            //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
+            //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
+            //
+            //            let windValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .wind)
+            //            self.speed = try windValues.decode(Double.self, forKey: .speed)
+            
+        }
+        
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case id, first_name, last_name, bdate
     }
     
 }
