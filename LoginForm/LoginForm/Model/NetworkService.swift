@@ -31,7 +31,7 @@ class NetworkService {
         
     }
     
-    func getUserInfo(userId: Int, completion: @escaping (User?, Error?) -> Void) {
+    func getUserInfo(userId: Int, completion: @escaping (Response?, Error?) -> Void) {
         
         guard let token = Session.shared.token else { return }
         
@@ -73,7 +73,7 @@ class NetworkService {
                 
                 let result = try decoder.decode(Response.self, from: dataResponse)
                 debugPrint("result:", result)
-//                completion(result, nil)
+                completion(result, nil)
                 
             } catch (let error) {
                 
@@ -198,7 +198,7 @@ class NetworkService {
         //-----
     }
     
-    func getUserFriends(userId: Int, completion: @escaping (Any?) -> Void) {
+    func getUserFriends(userId: Int, completion: @escaping (Welcome?, Error?) -> Void) {
         //-----
         
         guard let token = Session.shared.token else { return }
@@ -217,71 +217,101 @@ class NetworkService {
         urlConstructor.queryItems = [
             URLQueryItem(name: "user_id", value: "\(userId)"),
             URLQueryItem(name: "count", value: "5000"),
+            URLQueryItem(name: "fields", value: "photo_50"),
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
         
+        debugPrint(urlConstructor.url!)
+        
+        let decoder = JSONDecoder()
+        
         // задача для запуска
-        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            completion(json)
-        }
-        // запускаем задачу
-        task.resume()
+         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
+                   
+                   let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+                   debugPrint("jsonData:", jsonData)
+                   
+                   guard let dataResponse = data, error == nil else {
+                       debugPrint(error?.localizedDescription ?? "Response Error")
+                       return }
+                   
+                   do {
+                       
+                       let result = try decoder.decode(Welcome.self, from: dataResponse)
+                       debugPrint("result:", result)
+                       completion(result, nil)
+                       
+                   } catch (let error) {
+                       
+                       completion(nil, error)
+                   }
+               }
+               
+               task.resume()
         
         //-----
     }
-    
-    struct Response: Decodable {
-        let users: [User1]
-        
-        enum CodingKeys: String, CodingKey {
-            case users = "response"
-        }
-    }
-
-    // MARK: - Response
-    struct User1: Decodable {
-        let id: Int
-        let firstName, lastName, bdate: String
-
-        enum CodingKeys: String, CodingKey {
-            case id
-            case firstName = "first_name"
-            case lastName = "last_name"
-            case bdate
-        }
-    }
-    
-    struct User: Decodable {
-        let id: Double
-        let firstName: String
-        let lastName: String
-        let birthDate: Double
-        
-//        init(from decoder: Decoder) throws {
-//            let values = try? decoder.container(keyedBy: CodingKeys.self)
-//            self.id = try values!.decode(Double.self, forKey: .id)
-//            self.firstName = try values!.decode(String.self, forKey: .firstName)
-//            self.lastName = try values!.decode(String.self, forKey: .lastName)
-//            self.birthDate = try values!.decode(Double.self, forKey: .birthDate)
-//            //
-//            //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
-//            //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
-//            //
-//            //            let windValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .wind)
-//            //            self.speed = try windValues.decode(Double.self, forKey: .speed)
+  
+//    struct User: Decodable {
+//        let id: Double
+//        let firstName: String
+//        let lastName: String
+//        let birthDate: Double
 //
-//        }
-        
-    }
+////        init(from decoder: Decoder) throws {
+////            let values = try? decoder.container(keyedBy: CodingKeys.self)
+////            self.id = try values!.decode(Double.self, forKey: .id)
+////            self.firstName = try values!.decode(String.self, forKey: .firstName)
+////            self.lastName = try values!.decode(String.self, forKey: .lastName)
+////            self.birthDate = try values!.decode(Double.self, forKey: .birthDate)
+////            //
+////            //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
+////            //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
+////            //
+////            //            let windValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .wind)
+////            //            self.speed = try windValues.decode(Double.self, forKey: .speed)
+////
+////        }
+//
+//    }
     
-    enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case birthDate = "bdate"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case id
+//        case firstName = "first_name"
+//        case lastName = "last_name"
+//        case birthDate = "bdate"
+//    }
     
 }
+
+
+  // MARK: - Welcome
+  struct Welcome: Decodable {
+      let response: Response
+  }
+
+  // MARK: - Response
+  struct Response: Decodable {
+      let count: Int
+      let items: [User]
+  }
+
+  // MARK: - Item
+  struct User: Decodable {
+      let id: Int
+      let firstName, lastName: String
+      let photo50: String
+      let online: Int
+      let trackCode: String
+
+      enum CodingKeys: String, CodingKey {
+          case id
+          case firstName = "first_name"
+          case lastName = "last_name"
+          case photo50 = "photo_50"
+          case online
+          case trackCode = "track_code"
+      }
+  }
+  

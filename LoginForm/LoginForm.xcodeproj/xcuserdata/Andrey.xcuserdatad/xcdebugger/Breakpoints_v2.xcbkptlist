@@ -152,7 +152,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B884F52F-E08C-445E-BDFA-4E04EB2E6A81"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -168,20 +168,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6BBD8DB6-186E-4D3C-A8B6-C7025183815D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "285"
+            endingLineNumber = "285"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "6BBD8DB6-186E-4D3C-A8B6-C7025183815D - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -196,7 +196,7 @@
                </Location>
                <Location
                   uuid = "6BBD8DB6-186E-4D3C-A8B6-C7025183815D - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -216,20 +216,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6934BEDE-760B-43EC-9F2C-A814E7544113"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "286"
+            endingLineNumber = "286"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "6934BEDE-760B-43EC-9F2C-A814E7544113 - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -244,7 +244,7 @@
                </Location>
                <Location
                   uuid = "6934BEDE-760B-43EC-9F2C-A814E7544113 - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -264,20 +264,18 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7ABD4822-AA67-4A3D-98A4-86A507D70206"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "267"
-            endingLineNumber = "267"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "318"
+            endingLineNumber = "318">
             <Locations>
                <Location
                   uuid = "7ABD4822-AA67-4A3D-98A4-86A507D70206 - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -292,7 +290,7 @@
                </Location>
                <Location
                   uuid = "7ABD4822-AA67-4A3D-98A4-86A507D70206 - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -312,20 +310,18 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "61918036-C028-4CD6-BE0A-81599855F7D6"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "268"
-            endingLineNumber = "268"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "318"
+            endingLineNumber = "318">
             <Locations>
                <Location
                   uuid = "61918036-C028-4CD6-BE0A-81599855F7D6 - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -340,7 +336,7 @@
                </Location>
                <Location
                   uuid = "61918036-C028-4CD6-BE0A-81599855F7D6 - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -360,20 +356,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1C5A9D15-FD9C-457E-8481-7822E7431A90"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "264"
-            endingLineNumber = "264"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "1C5A9D15-FD9C-457E-8481-7822E7431A90 - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -388,7 +384,7 @@
                </Location>
                <Location
                   uuid = "1C5A9D15-FD9C-457E-8481-7822E7431A90 - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -408,20 +404,20 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "037DF2DA-F9D9-411A-ABC4-355F232A65E1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "User"
-            landmarkType = "14">
+            startingLineNumber = "283"
+            endingLineNumber = "283"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "037DF2DA-F9D9-411A-ABC4-355F232A65E1 - 6a65ede597a53fd"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.NetworkService.CodingKeys&gt;"
@@ -436,7 +432,7 @@
                </Location>
                <Location
                   uuid = "037DF2DA-F9D9-411A-ABC4-355F232A65E1 - a7ea9bc0578ddad2"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.NetworkService.CodingKeys.rawValue.getter : Swift.String"
@@ -465,6 +461,86 @@
             startingLineNumber = "38"
             endingLineNumber = "38"
             landmarkName = "getUserInfo(userId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B53F3A20-3103-481B-A61F-F19B7E718628"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59BB3472-B6FB-444C-86D4-CFB29B61B357"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4236A3DC-B4E9-450A-9D44-6B00F4CC7D21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "NetworkService"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5904084-B12E-4520-9CB3-352EE3A1B01A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "getUserFriends(userId:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E3BAF32-588A-430F-AA89-C86262AF1465"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

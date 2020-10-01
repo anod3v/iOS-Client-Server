@@ -61,10 +61,10 @@ class UserFriendsTableViewController: UITableViewController {
         
         tableView.reloadData()
         
-        _ = networkService.getUserInfo(userId: 616595796, completion: {
-            (result, error) in
-            debugPrint("the result is:", result)
-        })
+//        _ = networkService.getUserInfo(userId: 616595796, completion: {
+//            (result, error) in
+//            debugPrint("the result is:", result)
+//        })
 //
 //        _ = networkService.getUserGroups(userId: Session.shared.userId!, completion: {
 //            result in
@@ -76,10 +76,11 @@ class UserFriendsTableViewController: UITableViewController {
 //            debugPrint(result)
 //        })
 //
-//        _ = networkService.getUserFriends(userId: 616595781, completion: {
-//            result in
-//            debugPrint(result)
-//        })
+        _ = networkService.getUserFriends(userId: Session.shared.userId!, completion: {
+            (result, error) in
+            debugPrint(result?.response.items)
+            self.handleGetUserFriendsResponse(friends: (result?.response.items)!)
+        })
 //
 //        _ = networkService.searchGroups(queryText: "music", completion: {
 //            result in
@@ -105,6 +106,10 @@ class UserFriendsTableViewController: UITableViewController {
       }
       
       tableView.reloadData()
+        
+    }
+    
+    func handleGetUserFriendsResponse(friends: [User]) {
         
     }
     
