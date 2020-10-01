@@ -13,36 +13,11 @@ class UserFriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var friendImage: RoundImageView!
     @IBOutlet weak var friendName: UILabel!
 
-    var friend = Friend()
+    var friend = User(id: Int(), firstName: "", lastName: "", photo50: "", online: Int(), trackCode: "")
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        // Initialization code
-//
-//        let imageContainer = UIView(frame: friendImage.bounds)
-////        let myImage = UIImageView(frame: friendImage.bounds)
-////        myImage.backgroundColor != .clear
-//        imageContainer.clipsToBounds = false
-//        imageContainer.layer.masksToBounds = false
-//        imageContainer.layer.shadowColor = UIColor.black.cgColor
-//        imageContainer.layer.shadowOpacity = 0.5
-//        imageContainer.layer.shadowOffset = CGSize.zero
-//        imageContainer.layer.shadowRadius = 8
-////        myImage.layer.shadowPath = UIBezierPath(roundedRect: myImage.bounds, cornerRadius: myImage.frame.size.height / 2).cgPath
-////        myImage.layer.cornerRadius = 8
-//
-////        friendImage.frame = imageContainer.bounds
-////        friendImage.layer.masksToBounds = false
-////        friendImage.layer.shadowColor = UIColor.black.cgColor
-////        friendImage.layer.shadowOpacity = 1
-////        friendImage.layer.shadowOffset = CGSize.zero
-////        friendImage.layer.shadowRadius = 8
-//        friendImage.clipsToBounds = true
-//        friendImage.layer.cornerRadius = friendImage.frame.size.height / 2
-//
-//        imageContainer.layer.shadowPath = UIBezierPath(roundedRect: imageContainer.bounds, cornerRadius: friendImage.frame.size.height / 2).cgPath
-//
-//        imageContainer.addSubview(friendImage)
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,13 +26,10 @@ class UserFriendsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(for model: Friend) {
-        friendName.text = "\(model.firstName) \(model.secondName)"
+    func configure(for model: User) {
+        friendName.text = "\(model.firstName) \(model.lastName)"
         friend = model
-//        friendAge.text = "\(model.age)"
-        guard let path = model.avatar?.path else {
-            return friendImage.image = UIImage(named: "not found")
-        }
+        let path = model.photo50
         friendImage.image = UIImage(contentsOfFile: path)
     }
 
