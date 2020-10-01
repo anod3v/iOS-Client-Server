@@ -34,17 +34,14 @@ class UserFriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        _ = networkService.getUserFriends(userId: Session.shared.userId!, completion: {
-            (result, error) in
+        _ = networkService.getUserFriends(userId: Session.shared.userId!) {
+            [weak self] (result, error) in
             debugPrint("DEBUGPRINT:", result)
-            self.handleGetUserFriendsResponse(friends: (result?.response.items)!)
-        })
+            self!.friends = (result?.response.items)!
+            DispatchQueue.main.async {
+                self!.tableView.reloadData()
+            }
+        }
         
         getFriendsDictionary()
         
@@ -62,8 +59,6 @@ class UserFriendsTableViewController: UITableViewController {
         searchFooter = SearchFooter()
         
         self.view.addSubview(searchFooter)
-        
-        tableView.reloadData()
         
 //        _ = networkService.getUserInfo(userId: 616595796, completion: {
 //            (result, error) in

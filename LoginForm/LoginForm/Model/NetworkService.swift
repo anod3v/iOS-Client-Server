@@ -198,7 +198,7 @@ class NetworkService {
         //-----
     }
     
-    func getUserFriends(userId: Int, completion: @escaping (Welcome?, Error?) -> Void) {
+    func getUserFriends(userId: Int, callback: @escaping (Welcome?, Error?) -> Void) {
         //-----
         
         guard let token = Session.shared.token else { return }
@@ -240,11 +240,11 @@ class NetworkService {
                        
                        let result = try decoder.decode(Welcome.self, from: dataResponse)
                        debugPrint("result:", result)
-                       completion(result, nil)
+                       callback(result, nil)
                        
                    } catch (let error) {
                        
-                       completion(nil, error)
+                       callback(nil, error)
                    }
                }
                
