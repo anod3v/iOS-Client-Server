@@ -61,7 +61,7 @@ class UserFriendsTableViewController: UITableViewController {
         
         tableView.reloadData()
         
-        _ = networkService.getUserInfo(userId: Session.shared.userId!, completion: {
+        _ = networkService.getUserInfo(userId: 616595796, completion: {
             (result, error) in
             debugPrint("the result is:", result)
         })

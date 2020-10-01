@@ -70,9 +70,10 @@ class NetworkService {
             do {
                 
                 let result = try decoder.decode(User.self, from: dataResponse)
+                debugPrint("result:", result)
                 completion(result, nil)
                 
-            } catch(let error) {
+            } catch (let error) {
                 
                 completion(nil, error)
             }
@@ -232,16 +233,16 @@ class NetworkService {
     
     struct User: Decodable {
         let id: Int
-        let first_name: String
-        let last_name: String
-        let bdate: String
+        let firstName: String
+        let lastName: String
+        let birthDate: Double
         
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
             self.id = try values.decode(Int.self, forKey: .id)
-            self.first_name = try values.decode(String.self, forKey: .first_name)
-            self.last_name = try values.decode(String.self, forKey: .last_name)
-            self.bdate = try values.decode(String.self, forKey: .bdate)
+            self.firstName = try values.decode(String.self, forKey: .firstName)
+            self.lastName = try values.decode(String.self, forKey: .lastName)
+            self.birthDate = try values.decode(Double.self, forKey: .birthDate)
             //
             //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
             //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
@@ -254,7 +255,10 @@ class NetworkService {
     }
     
     enum CodingKeys: String, CodingKey {
-        case id, first_name, last_name, bdate
+        case id
+        case firstName = "first_name"
+        case lastName = "last_name"
+        case birthDate = "bdate"
     }
     
 }
