@@ -78,8 +78,8 @@ class UserFriendsTableViewController: UITableViewController {
 //
         _ = networkService.getUserFriends(userId: Session.shared.userId!, completion: {
             (result, error) in
-            debugPrint(result?.response.items)
-            self.handleGetUserFriendsResponse(friends: (result?.response.items)!)
+            debugPrint(result)
+//            self.handleGetUserFriendsResponse(friend: result as! [User])
         })
 //
 //        _ = networkService.searchGroups(queryText: "music", completion: {
@@ -109,7 +109,7 @@ class UserFriendsTableViewController: UITableViewController {
         
     }
     
-    func handleGetUserFriendsResponse(friends: [User]) {
+    func handleGetUserFriendsResponse(friend: [User]) {
         
     }
     
