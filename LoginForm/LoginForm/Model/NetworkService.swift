@@ -35,6 +35,8 @@ class NetworkService {
         
         guard let token = Session.shared.token else { return }
         
+        
+        
         // Конфигурация по умолчанию
         let configuration = URLSessionConfiguration.default
         
@@ -69,9 +71,9 @@ class NetworkService {
             
             do {
                 
-                let result = try decoder.decode(User.self, from: dataResponse)
+                let result = try decoder.decode(Response.self, from: dataResponse)
                 debugPrint("result:", result)
-                completion(result, nil)
+//                completion(result, nil)
                 
             } catch (let error) {
                 
@@ -231,26 +233,47 @@ class NetworkService {
         //-----
     }
     
-    struct User: Decodable {
+    struct Response: Decodable {
+        let users: [User1]
+        
+        enum CodingKeys: String, CodingKey {
+            case users = "response"
+        }
+    }
+
+    // MARK: - Response
+    struct User1: Decodable {
         let id: Int
+        let firstName, lastName, bdate: String
+
+        enum CodingKeys: String, CodingKey {
+            case id
+            case firstName = "first_name"
+            case lastName = "last_name"
+            case bdate
+        }
+    }
+    
+    struct User: Decodable {
+        let id: Double
         let firstName: String
         let lastName: String
         let birthDate: Double
         
-        init(from decoder: Decoder) throws {
-            let values = try decoder.container(keyedBy: CodingKeys.self)
-            self.id = try values.decode(Int.self, forKey: .id)
-            self.firstName = try values.decode(String.self, forKey: .firstName)
-            self.lastName = try values.decode(String.self, forKey: .lastName)
-            self.birthDate = try values.decode(Double.self, forKey: .birthDate)
-            //
-            //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
-            //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
-            //
-            //            let windValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .wind)
-            //            self.speed = try windValues.decode(Double.self, forKey: .speed)
-            
-        }
+//        init(from decoder: Decoder) throws {
+//            let values = try? decoder.container(keyedBy: CodingKeys.self)
+//            self.id = try values!.decode(Double.self, forKey: .id)
+//            self.firstName = try values!.decode(String.self, forKey: .firstName)
+//            self.lastName = try values!.decode(String.self, forKey: .lastName)
+//            self.birthDate = try values!.decode(Double.self, forKey: .birthDate)
+//            //
+//            //            let mainValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .main)
+//            //            self.temp = try mainValues.decode(Double.self, forKey: .temperature)
+//            //
+//            //            let windValues = try values.nestedContainer(keyedBy: CoordKeys.self, forKey: .wind)
+//            //            self.speed = try windValues.decode(Double.self, forKey: .speed)
+//
+//        }
         
     }
     
