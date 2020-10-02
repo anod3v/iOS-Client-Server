@@ -34,11 +34,11 @@ class UserFriendsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        _ = networkService.getUserFriends(userId: Session.shared.userId!) {
-//            [weak self] (result, error) in
+        _ = networkService.getUserFriends(userId: Session.shared.userId!) {
+            [weak self] (result, error) in
 //            debugPrint("DEBUGPRINT:", result)
-//            self!.handleGetUserFriendsResponse(friends: (result?.response.items)!)
-//        }
+            self!.handleGetUserFriendsResponse(friends: (result?.response.items)!)
+        }
         
         getFriendsDictionary()
         
@@ -67,10 +67,10 @@ class UserFriendsTableViewController: UITableViewController {
 //            debugPrint(result)
 //        })
 //
-        _ = networkService.getUserPhotos(userId: Session.shared.userId!) {
-            [weak self] (result, error) in
-            debugPrint("DEBUGPRINTPHOTO:", result)
-        }
+//        _ = networkService.getUserPhotos(userId: 616595781, completion: {
+//            result in
+//            debugPrint(result)
+//        })
 //
 //
 //        _ = networkService.searchGroups(queryText: "music", completion: {
@@ -166,9 +166,9 @@ class UserFriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let currentCell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
         let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
-//        friendPhotoVC.selectedFriend = currentCell.friend
+        friendPhotoVC.selectedFriend = cell.friend
         self.show(friendPhotoVC, sender: nil)
         
     }

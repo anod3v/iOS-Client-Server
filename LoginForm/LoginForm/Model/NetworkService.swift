@@ -244,7 +244,7 @@ class NetworkService {
          let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
                    
                    let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                   debugPrint("jsonData:", jsonData)
+//                   debugPrint("jsonData:", jsonData)
                    
                    guard let dataResponse = data, error == nil else {
                        debugPrint(error?.localizedDescription ?? "Response Error")
@@ -253,7 +253,7 @@ class NetworkService {
                    do {
                        
                        let result = try decoder.decode(Welcome.self, from: dataResponse)
-                       debugPrint("result:", result)
+//                       debugPrint("result:", result)
                        callback(result, nil)
                        
                    } catch (let error) {
@@ -300,18 +300,18 @@ class NetworkService {
       }
   }
 
-struct PhotoWelcome: Codable {
+struct PhotoWelcome: Decodable {
     let response: PhotoResponse
 }
 
 // MARK: - Response
-struct PhotoResponse: Codable {
+struct PhotoResponse: Decodable {
     let count: Int
     let items: [Photo]
 }
 
 // MARK: - Item
-struct Photo: Codable {
+struct Photo: Decodable {
     let albumID, date, id, ownerID: Int
     let hasTags: Bool
     let height: Int
