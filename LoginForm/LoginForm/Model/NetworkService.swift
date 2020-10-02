@@ -31,9 +31,11 @@ class NetworkService {
         
     }
     
-    func getUserInfo(userId: Int, completion: @escaping (Any?) -> Void) {
-
+    func getUserInfo(userId: Int, completion: @escaping (Response?, Error?) -> Void) {
+        
         guard let token = Session.shared.token else { return }
+        
+        
         
         // Конфигурация по умолчанию
         let configuration = URLSessionConfiguration.default
@@ -53,22 +55,39 @@ class NetworkService {
             URLQueryItem(name: "v", value: "5.68")
         ]
         
-        debugPrint("urlConstructor.url!:", urlConstructor.url!)
+        let decoder = JSONDecoder()
+        
+//        debugPrint("urlConstructor.url!:", urlConstructor.url!)
         
         // задача для запуска
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            completion(json)
+            
+            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+            debugPrint("jsonData:", jsonData)
+            
+            guard let dataResponse = data, error == nil else {
+                debugPrint(error?.localizedDescription ?? "Response Error")
+                return }
+            
+            do {
+                
+                let result = try decoder.decode(Response.self, from: dataResponse)
+                debugPrint("result:", result)
+                completion(result, nil)
+                
+            } catch (let error) {
+                
+                completion(nil, error)
+            }
         }
-        // запускаем задачу
+        
         task.resume()
         
         //-----
     }
     
     func getUserGroups(userId: Int, completion: @escaping (Any?) -> Void) {
-
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -88,7 +107,7 @@ class NetworkService {
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
-
+        
         
         // задача для запуска
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
@@ -103,9 +122,9 @@ class NetworkService {
         //-----
     }
     
-    func getUserPhotos(userId: Int, completion: @escaping (Any?) -> Void) {
+    func getUserPhotos(userId: Int, callback: @escaping (PhotoWelcome?, Error?) -> Void) {
         //-----
-        guard let userId = Session.shared.userId else { return }
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -127,18 +146,33 @@ class NetworkService {
             URLQueryItem(name: "v", value: "5.68")
         ]
         
-        debugPrint("urlConstructor.url!:", urlConstructor.url!)
+//        debugPrint(urlConstructor.url!)
+        
+        let decoder = JSONDecoder()
         
         // задача для запуска
-        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            
-            completion(json)
-
-        }
-        // запускаем задачу
-        task.resume()
+         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
+                   
+                   let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+//                   debugPrint("jsonData:", jsonData)
+                   
+                   guard let dataResponse = data, error == nil else {
+                       debugPrint(error?.localizedDescription ?? "Response Error")
+                       return }
+                   
+                   do {
+                       
+                       let result = try decoder.decode(PhotoWelcome.self, from: dataResponse)
+//                       debugPrint("result:", result)
+                       callback(result, nil)
+                       
+                   } catch (let error) {
+                       
+                       callback(nil, error)
+                   }
+               }
+               
+               task.resume()
         
         //-----
     }
@@ -170,7 +204,7 @@ class NetworkService {
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
             // в замыкании данные, полученные от сервера, мы преобразуем в json
             let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-
+            
             completion(json)
         }
         // запускаем задачу
@@ -179,9 +213,9 @@ class NetworkService {
         //-----
     }
     
-    func getUserFriends(userId: Int, completion: @escaping (Any?) -> Void) {
+    func getUserFriends(userId: Int, callback: @escaping (Welcome?, Error?) -> Void) {
         //-----
-
+        
         guard let token = Session.shared.token else { return }
         
         // Конфигурация по умолчанию
@@ -198,20 +232,105 @@ class NetworkService {
         urlConstructor.queryItems = [
             URLQueryItem(name: "user_id", value: "\(userId)"),
             URLQueryItem(name: "count", value: "5000"),
+            URLQueryItem(name: "fields", value: "photo_200"),
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
         
+//        debugPrint(urlConstructor.url!)
+        
+        let decoder = JSONDecoder()
+        
         // задача для запуска
-        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            // в замыкании данные, полученные от сервера, мы преобразуем в json
-            let json = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            completion(json)
-        }
-        // запускаем задачу
-        task.resume()
+         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
+                   
+                   let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+//                   debugPrint("jsonData:", jsonData)
+                   
+                   guard let dataResponse = data, error == nil else {
+                       debugPrint(error?.localizedDescription ?? "Response Error")
+                       return }
+                   
+                   do {
+                       
+                       let result = try decoder.decode(Welcome.self, from: dataResponse)
+//                       debugPrint("result:", result)
+                       callback(result, nil)
+                       
+                   } catch (let error) {
+                       
+                       callback(nil, error)
+                   }
+               }
+               
+               task.resume()
         
         //-----
     }
+  
     
 }
+
+
+  // MARK: - Welcome
+  struct Welcome: Decodable {
+      let response: Response
+  }
+
+  // MARK: - Response
+  struct Response: Decodable {
+      let count: Int
+      let items: [User]
+  }
+
+  // MARK: - Item
+  struct User: Decodable {
+      let id: Int
+      let firstName, lastName: String
+      let photo_200: String
+      let online: Int
+      let trackCode: String
+
+      enum CodingKeys: String, CodingKey {
+          case id
+          case firstName = "first_name"
+          case lastName = "last_name"
+          case photo_200 = "photo_200"
+          case online
+          case trackCode = "track_code"
+      }
+  }
+
+struct PhotoWelcome: Decodable {
+    let response: PhotoResponse
+}
+
+// MARK: - Response
+struct PhotoResponse: Decodable {
+    let count: Int
+    let items: [Photo]
+}
+
+// MARK: - Item
+struct Photo: Decodable {
+    let albumID, date, id, ownerID: Int
+    let hasTags: Bool
+    let height: Int
+    let photo130, photo604, photo75, photo807: String
+    let text: String
+    let width: Int
+
+    enum CodingKeys: String, CodingKey {
+        case albumID = "album_id"
+        case date, id
+        case ownerID = "owner_id"
+        case hasTags = "has_tags"
+        case height
+        case photo130 = "photo_130"
+        case photo604 = "photo_604"
+        case photo75 = "photo_75"
+        case photo807 = "photo_807"
+        case text, width
+    }
+}
+  

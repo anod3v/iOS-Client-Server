@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5504B87624ED97E90026C508 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504B87524ED97E90026C508 /* RoundView.swift */; };
+		55055660252705D5004E8239 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505565F252705D5004E8239 /* Cachable.swift */; };
 		551CDE7D2507A21900C05718 /* PaintCodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */; };
 		5544F42A24F2CA12008570A1 /* PostFullSizeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */; };
 		5544F42C24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */; };
 		55528DD125211691004C99B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55528DD025211691004C99B3 /* NetworkService.swift */; };
 		5564F9AB24F45AE800219C33 /* FriendFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5564F9AA24F45AE800219C33 /* FriendFactory.swift */; };
 		557822EA24E467FA00D4705B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557822E924E467FA00D4705B /* Post.swift */; };
+		5581EA6E2524D313000C2BA8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5581EA6D2524D313000C2BA8 /* Model.swift */; };
 		5590B70124FAA71700637025 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590B70024FAA71600637025 /* NewsFeedViewController.swift */; };
 		5590B70424FAAF7B00637025 /* NewsFeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590B70224FAAF7B00637025 /* NewsFeedCollectionViewCell.swift */; };
 		5590B70524FAAF7B00637025 /* NewsFeedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5590B70324FAAF7B00637025 /* NewsFeedCollectionViewCell.xib */; };
@@ -52,12 +54,14 @@
 
 /* Begin PBXFileReference section */
 		5504B87524ED97E90026C508 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		5505565F252705D5004E8239 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCodeExtension.swift; sourceTree = "<group>"; };
 		5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewController.swift; sourceTree = "<group>"; };
 		5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		55528DD025211691004C99B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		5564F9AA24F45AE800219C33 /* FriendFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFactory.swift; sourceTree = "<group>"; };
 		557822E924E467FA00D4705B /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5581EA6D2524D313000C2BA8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5590B70024FAA71600637025 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		5590B70224FAAF7B00637025 /* NewsFeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		5590B70324FAAF7B00637025 /* NewsFeedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -215,7 +219,9 @@
 		55E37CB0251CCB6900435E5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5581EA6D2524D313000C2BA8 /* Model.swift */,
 				55528DD025211691004C99B3 /* NetworkService.swift */,
+				5505565F252705D5004E8239 /* Cachable.swift */,
 				55A489D7251CCEA9002A4CF1 /* Session.swift */,
 				55BA0CD024E4013000FDD3F5 /* datasource.bundle */,
 				557822E924E467FA00D4705B /* Post.swift */,
@@ -341,6 +347,7 @@
 				55B8647824DB278000FCA137 /* UserFriendsTableViewCell.swift in Sources */,
 				5590D38D24DC52690035E075 /* GroupsTableViewCell.swift in Sources */,
 				55C5467424D2D942002D3FFC /* LoginFormController.swift in Sources */,
+				55055660252705D5004E8239 /* Cachable.swift in Sources */,
 				5590B70124FAA71700637025 /* NewsFeedViewController.swift in Sources */,
 				55E0B03D24DD3EDF00B3AB07 /* Friend.swift in Sources */,
 				5596D89C24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift in Sources */,
@@ -361,6 +368,7 @@
 				55A489D8251CCEA9002A4CF1 /* Session.swift in Sources */,
 				55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */,
 				5590D39E24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift in Sources */,
+				5581EA6E2524D313000C2BA8 /* Model.swift in Sources */,
 				5590D39424DC615D0035E075 /* UserGroupsTableViewCell.swift in Sources */,
 				5590D38F24DC52A20035E075 /* GroupsTableViewController.swift in Sources */,
 				5564F9AB24F45AE800219C33 /* FriendFactory.swift in Sources */,

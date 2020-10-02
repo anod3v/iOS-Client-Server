@@ -11,11 +11,13 @@ import UIKit
 
 class UserFriendsTableViewController: UITableViewController {
     
-    var friends: [Friend] = []
+    var networkService = NetworkService()
     
-    var selectedFriend = Friend () // TODO: to find a better way to init?
+    var friends = [User]()
     
-    var friendsDictionary = [String: [Friend]]()
+    var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "") // TODO: to find a better way to init?
+    
+    var friendsDictionary = [String: [User]]()
     
     var friendSectionTitles = [String]()
     
@@ -25,20 +27,18 @@ class UserFriendsTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     
-    var filteredFriends: [Friend] = []
+    var filteredFriends: [User] = []
     
     //--------------
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        friends = FriendFactory().friends
+        _ = networkService.getUserFriends(userId: Session.shared.userId!) {
+            [weak self] (result, error) in
+//            debugPrint("DEBUGPRINT:", result)
+            self!.handleGetUserFriendsResponse(friends: (result?.response.items)!)
+        }
         
         getFriendsDictionary()
         
@@ -57,7 +57,26 @@ class UserFriendsTableViewController: UITableViewController {
         
         self.view.addSubview(searchFooter)
         
-        tableView.reloadData()
+//        _ = networkService.getUserInfo(userId: 616595796, completion: {
+//            (result, error) in
+//            debugPrint("the result is:", result)
+//        })
+//
+//        _ = networkService.getUserGroups(userId: Session.shared.userId!, completion: {
+//            result in
+//            debugPrint(result)
+//        })
+//
+//        _ = networkService.getUserPhotos(userId: 616595781, completion: {
+//            result in
+//            debugPrint(result)
+//        })
+//
+//
+//        _ = networkService.searchGroups(queryText: "music", completion: {
+//            result in
+//            debugPrint(result)
+//        })
         
     }
     
@@ -73,19 +92,24 @@ class UserFriendsTableViewController: UITableViewController {
     }
     
     func filterContentForSearchText(_ searchText: String) {
-      filteredFriends = friends.filter { (friend: Friend) -> Bool in
-        return friend.firstName.lowercased().contains(searchText.lowercased()) || friend.secondName.lowercased().contains(searchText.lowercased())
+      filteredFriends = friends.filter { (friend: User) -> Bool in
+        return friend.firstName.lowercased().contains(searchText.lowercased()) || friend.lastName.lowercased().contains(searchText.lowercased())
       }
       
       tableView.reloadData()
         
     }
     
+    func handleGetUserFriendsResponse(friends: [User]) {
+        self.friends = friends
+        DispatchQueue.main.async { self.tableView.reloadData() }
+    }
+    
     func getFriendsDictionary() {
         
-        var friendsToDisplay = [Friend]()
+        var friendsToDisplay = [User]()
         
-        friendsDictionary = [String: [Friend]]()
+        friendsDictionary = [String: [User]]()
         
         friendSectionTitles = [String]()
         
@@ -142,10 +166,9 @@ class UserFriendsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let currentCell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
+        let cell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
         let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
-        friendPhotoVC.selectedFriend = currentCell.friend
-//        friendPhotoVC.friends = friends
+        friendPhotoVC.selectedFriend = cell.friend
         self.show(friendPhotoVC, sender: nil)
         
     }
@@ -157,52 +180,6 @@ class UserFriendsTableViewController: UITableViewController {
      override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         return friendSectionTitles
     }
-    
-    
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
-    
-    /*
-     // Override to support rearranging the table view.
-     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-     
-     }
-     */
-    
-    /*
-     // Override to support conditional rearranging of the table view.
-     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the item to be re-orderable.
-     return true
-     }
-     */
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 
