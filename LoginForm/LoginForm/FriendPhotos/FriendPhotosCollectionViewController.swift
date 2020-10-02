@@ -26,9 +26,9 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
         layout.minimumLineSpacing = 2
         layout.minimumInteritemSpacing = 2
         
-        _ = networkService.getUserPhotos(userId: Session.shared.userId!) {
+        _ = networkService.getUserPhotos(userId: selectedFriend.id) {
             [weak self] (result, error) in
-            debugPrint("DEBUGPRINTPHOTO:", result)
+//            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
         }
         

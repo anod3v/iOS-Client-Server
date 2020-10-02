@@ -37,7 +37,7 @@ class FriendPhotosCollectionViewCell: UICollectionViewCell {
     
     func configure(for model: Photo) {
 
-        friendPhotoImage.loadImageUsingCacheWithURLString(model.photo2560, placeHolder: nil) { (bool) in
+        friendPhotoImage.loadImageUsingCacheWithURLString(model.photo604, placeHolder: nil) { (bool) in
             //perform actions if needed
         }
         

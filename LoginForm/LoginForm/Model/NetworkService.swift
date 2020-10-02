@@ -137,15 +137,16 @@ class NetworkService {
         var urlConstructor = URLComponents()
         urlConstructor.scheme = "https"
         urlConstructor.host = "api.vk.com"
-        urlConstructor.path = "/method/photos.getAll"
+        urlConstructor.path = "/method/photos.get"
         urlConstructor.queryItems = [
             URLQueryItem(name: "owner_id", value: "\(userId)"),
-            URLQueryItem(name: "count", value: "200"),
+            URLQueryItem(name: "album_id", value: "wall"),
+            URLQueryItem(name: "count", value: "1000"),
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
         
-        debugPrint(urlConstructor.url!)
+//        debugPrint(urlConstructor.url!)
         
         let decoder = JSONDecoder()
         
@@ -153,7 +154,7 @@ class NetworkService {
          let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
                    
                    let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-                   debugPrint("jsonData:", jsonData)
+//                   debugPrint("jsonData:", jsonData)
                    
                    guard let dataResponse = data, error == nil else {
                        debugPrint(error?.localizedDescription ?? "Response Error")
@@ -162,7 +163,7 @@ class NetworkService {
                    do {
                        
                        let result = try decoder.decode(PhotoWelcome.self, from: dataResponse)
-                       debugPrint("result:", result)
+//                       debugPrint("result:", result)
                        callback(result, nil)
                        
                    } catch (let error) {
@@ -236,7 +237,7 @@ class NetworkService {
             URLQueryItem(name: "v", value: "5.68")
         ]
         
-        debugPrint(urlConstructor.url!)
+//        debugPrint(urlConstructor.url!)
         
         let decoder = JSONDecoder()
         
@@ -315,11 +316,9 @@ struct Photo: Decodable {
     let albumID, date, id, ownerID: Int
     let hasTags: Bool
     let height: Int
-    let photo1280, photo130, photo2560, photo604: String
-    let photo75, photo807: String
+    let photo130, photo604, photo75, photo807: String
     let text: String
     let width: Int
-    let postID: Int?
 
     enum CodingKeys: String, CodingKey {
         case albumID = "album_id"
@@ -327,14 +326,11 @@ struct Photo: Decodable {
         case ownerID = "owner_id"
         case hasTags = "has_tags"
         case height
-        case photo1280 = "photo_1280"
         case photo130 = "photo_130"
-        case photo2560 = "photo_2560"
         case photo604 = "photo_604"
         case photo75 = "photo_75"
         case photo807 = "photo_807"
         case text, width
-        case postID = "post_id"
     }
 }
   
