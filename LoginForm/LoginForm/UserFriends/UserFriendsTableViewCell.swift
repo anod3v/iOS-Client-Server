@@ -13,7 +13,7 @@ class UserFriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var friendImage: RoundImageView!
     @IBOutlet weak var friendName: UILabel!
 
-    var friend = User(id: Int(), firstName: "", lastName: "", photo50: "", online: Int(), trackCode: "")
+    var friend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "")
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +29,7 @@ class UserFriendsTableViewCell: UITableViewCell {
     func configure(for model: User) {
         friendName.text = "\(model.firstName) \(model.lastName)"
         friend = model
-        friendImage.loadImageUsingCacheWithURLString(model.photo50, placeHolder: nil) { (bool) in
+        friendImage.loadImageUsingCacheWithURLString(model.photo_200, placeHolder: nil) { (bool) in
             //perform actions if needed
         }
     }

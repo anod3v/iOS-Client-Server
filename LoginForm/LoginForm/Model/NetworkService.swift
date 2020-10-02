@@ -217,7 +217,7 @@ class NetworkService {
         urlConstructor.queryItems = [
             URLQueryItem(name: "user_id", value: "\(userId)"),
             URLQueryItem(name: "count", value: "5000"),
-            URLQueryItem(name: "fields", value: "photo_50"),
+            URLQueryItem(name: "fields", value: "photo_200"),
             URLQueryItem(name: "access_token", value: "\(token)"),
             URLQueryItem(name: "v", value: "5.68")
         ]
@@ -272,7 +272,7 @@ class NetworkService {
   struct User: Decodable {
       let id: Int
       let firstName, lastName: String
-      let photo50: String
+      let photo_200: String
       let online: Int
       let trackCode: String
 
@@ -280,7 +280,7 @@ class NetworkService {
           case id
           case firstName = "first_name"
           case lastName = "last_name"
-          case photo50 = "photo_50"
+          case photo_200 = "photo_200"
           case online
           case trackCode = "track_code"
       }
