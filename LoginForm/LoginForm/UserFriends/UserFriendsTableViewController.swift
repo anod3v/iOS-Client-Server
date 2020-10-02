@@ -15,8 +15,6 @@ class UserFriendsTableViewController: UITableViewController {
     
     var friends = [User]()
     
-    var photos = [Photo]()
-    
     var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo50: "", online: Int(), trackCode: "") // TODO: to find a better way to init?
     
     var friendsDictionary = [String: [User]]()
@@ -104,26 +102,8 @@ class UserFriendsTableViewController: UITableViewController {
     
     func handleGetUserFriendsResponse(friends: [User]) {
         self.friends = friends
-        for friend in friends {
-            let id = friend.id
-            let image = downloadImage(from: URL(string: friend.photo50)!)
-            photos.append(Photo(userId: id, photoImage: image))
-            
-        }
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
-    
-func downloadImage(from url: URL) {
-    print("Download Started")
-        networkService.getImage(from: url) { data, response, error in
-        guard let data = data, error == nil else { return }
-        print(response?.suggestedFilename ?? url.lastPathComponent)
-        print("Download Finished")
-        DispatchQueue.main.async() { [weak self] in
-            self?.imageView.image = UIImage(data: data)
-        }
-    }
-}
     
     func getFriendsDictionary() {
         

@@ -29,8 +29,9 @@ class UserFriendsTableViewCell: UITableViewCell {
     func configure(for model: User) {
         friendName.text = "\(model.firstName) \(model.lastName)"
         friend = model
-        let path = model.photo50
-        friendImage.image = UIImage(contentsOfFile: path)
+        friendImage.loadImageUsingCacheWithURLString(model.photo50, placeHolder: nil) { (bool) in
+            //perform actions if needed
+        }
     }
 
 }

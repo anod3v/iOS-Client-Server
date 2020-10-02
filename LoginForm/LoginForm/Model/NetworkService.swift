@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 class NetworkService {
     
@@ -58,7 +57,7 @@ class NetworkService {
         
         let decoder = JSONDecoder()
         
-        //        debugPrint("urlConstructor.url!:", urlConstructor.url!)
+//        debugPrint("urlConstructor.url!:", urlConstructor.url!)
         
         // задача для запуска
         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
@@ -228,72 +227,62 @@ class NetworkService {
         let decoder = JSONDecoder()
         
         // задача для запуска
-        let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
-            
-            let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
-            debugPrint("jsonData:", jsonData)
-            
-            guard let dataResponse = data, error == nil else {
-                debugPrint(error?.localizedDescription ?? "Response Error")
-                return }
-            
-            do {
-                
-                let result = try decoder.decode(Welcome.self, from: dataResponse)
-                debugPrint("result:", result)
-                callback(result, nil)
-                
-            } catch (let error) {
-                
-                callback(nil, error)
-            }
-        }
-        
-        task.resume()
+         let task = session.dataTask(with: urlConstructor.url!) { (data, response, error) in
+                   
+                   let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+                   debugPrint("jsonData:", jsonData)
+                   
+                   guard let dataResponse = data, error == nil else {
+                       debugPrint(error?.localizedDescription ?? "Response Error")
+                       return }
+                   
+                   do {
+                       
+                       let result = try decoder.decode(Welcome.self, from: dataResponse)
+                       debugPrint("result:", result)
+                       callback(result, nil)
+                       
+                   } catch (let error) {
+                       
+                       callback(nil, error)
+                   }
+               }
+               
+               task.resume()
         
         //-----
     }
-    
-    func getImage(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
-        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
-    }
+  
     
 }
 
 
-// MARK: - Welcome
-struct Welcome: Decodable {
-    let response: Response
-}
+  // MARK: - Welcome
+  struct Welcome: Decodable {
+      let response: Response
+  }
 
-// MARK: - Response
-struct Response: Decodable {
-    let count: Int
-    let items: [User]
-}
+  // MARK: - Response
+  struct Response: Decodable {
+      let count: Int
+      let items: [User]
+  }
 
-// MARK: - Item
-struct User: Decodable {
-    let id: Int
-    let firstName, lastName: String
-    let photo50: String
-    let online: Int
-    let trackCode: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id
-        case firstName = "first_name"
-        case lastName = "last_name"
-        case photo50 = "photo_50"
-        case online
-        case trackCode = "track_code"
-    }
-}
+  // MARK: - Item
+  struct User: Decodable {
+      let id: Int
+      let firstName, lastName: String
+      let photo50: String
+      let online: Int
+      let trackCode: String
 
-struct Photo {
-    let userId: Int
-    let photoImage: UIImage
-}
-
-
-
+      enum CodingKeys: String, CodingKey {
+          case id
+          case firstName = "first_name"
+          case lastName = "last_name"
+          case photo50 = "photo_50"
+          case online
+          case trackCode = "track_code"
+      }
+  }
+  
