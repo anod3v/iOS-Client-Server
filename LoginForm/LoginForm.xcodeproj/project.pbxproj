@@ -10,6 +10,7 @@
 		5504B87624ED97E90026C508 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504B87524ED97E90026C508 /* RoundView.swift */; };
 		55055660252705D5004E8239 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505565F252705D5004E8239 /* Cachable.swift */; };
 		551CDE7D2507A21900C05718 /* PaintCodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */; };
+		55285E8925285F73005838F5 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55285E8725285F73005838F5 /* CoreData.xcdatamodeld */; };
 		5544F42A24F2CA12008570A1 /* PostFullSizeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */; };
 		5544F42C24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */; };
 		55528DD125211691004C99B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55528DD025211691004C99B3 /* NetworkService.swift */; };
@@ -56,6 +57,7 @@
 		5504B87524ED97E90026C508 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		5505565F252705D5004E8239 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCodeExtension.swift; sourceTree = "<group>"; };
+		55285E8825285F73005838F5 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewController.swift; sourceTree = "<group>"; };
 		5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		55528DD025211691004C99B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		55E37CB0251CCB6900435E5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55285E8725285F73005838F5 /* CoreData.xcdatamodeld */,
 				5581EA6D2524D313000C2BA8 /* Model.swift */,
 				55528DD025211691004C99B3 /* NetworkService.swift */,
 				5505565F252705D5004E8239 /* Cachable.swift */,
@@ -366,6 +369,7 @@
 				5596D89924FBCF2700FD0914 /* PhotoCollageView.swift in Sources */,
 				5590D39224DC60520035E075 /* UserGroupsTableViewController.swift in Sources */,
 				55A489D8251CCEA9002A4CF1 /* Session.swift in Sources */,
+				55285E8925285F73005838F5 /* CoreData.xcdatamodeld in Sources */,
 				55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */,
 				5590D39E24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift in Sources */,
 				5581EA6E2524D313000C2BA8 /* Model.swift in Sources */,
@@ -576,6 +580,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55285E8725285F73005838F5 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55285E8825285F73005838F5 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 55285E8825285F73005838F5 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55C5465024D2CC59002D3FFC /* Project object */;
 }
