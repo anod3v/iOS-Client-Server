@@ -10,7 +10,7 @@ import UIKit
 
 class StorageService {
     
-    let coreDataStack = CoreDataStack(modelName: "LoginForm")
+    let coreDataStack = CoreDataStack(modelName: "CoreDataModel")
     
     func saveUsers(users:[User]) {
         let context = coreDataStack.persistentContainer.viewContext
@@ -31,16 +31,16 @@ class StorageService {
         var users = [User]()
         let localUsers = (try? context.fetch(LocalUser.fetchRequest()) as? [LocalUser] ?? [])
         for localUser in localUsers! {
-        let user = User(id: Int(localUser.id),
-                        firstName: localUser.firstName!,
-                        lastName: localUser.lastName!,
-                        photo_200: localUser.photo_200!,
-                        online: Int(localUser.online),
-                        trackCode: localUser.trackCode!)
+            let user = User(id: Int(localUser.id),
+                            firstName: localUser.firstName!,
+                            lastName: localUser.lastName!,
+                            photo_200: localUser.photo_200!,
+                            online: Int(localUser.online),
+                            trackCode: localUser.trackCode!)
             users.append(user)
-    }
+        }
         return users
-}
-
-
+    }
+    
+    
 }

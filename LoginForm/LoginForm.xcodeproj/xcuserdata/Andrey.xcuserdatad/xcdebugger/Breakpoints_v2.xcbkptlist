@@ -14,42 +14,10 @@
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "170"
-            endingLineNumber = "170"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "D4A8EA7C-6310-4839-91ED-284A594B81B2 - ba76d6cc9218e0a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LoginForm.UserFriendsTableViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "LoginForm"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/UserFriends/UserFriendsTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "536">
-               </Location>
-               <Location
-                  uuid = "D4A8EA7C-6310-4839-91ED-284A594B81B2 - ba76d6cc9218e0a0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LoginForm.UserFriendsTableViewController.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "LoginForm"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/UserFriends/UserFriendsTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "170"
-                  endingLineNumber = "170"
-                  offsetFromSymbolStart = "1436">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -276,21 +244,6 @@
             landmarkType = "14">
             <Locations>
                <Location
-                  uuid = "8BC6EEE9-5392-4053-9661-07C46938FFF3 - 9a44f5f3bd297128"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LoginForm.User.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.User.CodingKeys&gt;"
-                  moduleName = "LoginForm"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/Model/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "67">
-               </Location>
-               <Location
                   uuid = "8BC6EEE9-5392-4053-9661-07C46938FFF3 - caa5b5baa2044028"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -304,6 +257,21 @@
                   startingLineNumber = "296"
                   endingLineNumber = "296"
                   offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "8BC6EEE9-5392-4053-9661-07C46938FFF3 - 9a44f5f3bd297128"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginForm.User.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.User.CodingKeys&gt;"
+                  moduleName = "LoginForm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/Model/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "296"
+                  endingLineNumber = "296"
+                  offsetFromSymbolStart = "67">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -324,21 +292,6 @@
             landmarkType = "13">
             <Locations>
                <Location
-                  uuid = "92CA5027-BF31-468F-BF32-30B15BBC9B8A - 9a44f5f3bd297128"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "LoginForm.User.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.User.CodingKeys&gt;"
-                  moduleName = "LoginForm"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/Model/NetworkService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "296"
-                  endingLineNumber = "296"
-                  offsetFromSymbolStart = "67">
-               </Location>
-               <Location
                   uuid = "92CA5027-BF31-468F-BF32-30B15BBC9B8A - caa5b5baa2044028"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -352,6 +305,21 @@
                   startingLineNumber = "296"
                   endingLineNumber = "296"
                   offsetFromSymbolStart = "91">
+               </Location>
+               <Location
+                  uuid = "92CA5027-BF31-468F-BF32-30B15BBC9B8A - 9a44f5f3bd297128"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginForm.User.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;LoginForm.User.CodingKeys&gt;"
+                  moduleName = "LoginForm"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/7.%20iOS%20Client-Server/Git/iOS-Client-Server/LoginForm/LoginForm/Model/NetworkService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "296"
+                  endingLineNumber = "296"
+                  offsetFromSymbolStart = "67">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -514,6 +482,22 @@
             endingLineNumber = "284"
             landmarkName = "Response"
             landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9C585D8-EE8D-4EEC-8FD9-DDA1063E97F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LoginForm/Model/CoreData/StorageService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "StorageService"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
