@@ -47,6 +47,8 @@
 		55E75038252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */; };
 		55E75039252A48C200FDFD71 /* LocalUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */; };
 		55E7503A252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75036252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift */; };
+		55E7503D252A519800FDFD71 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7503C252A519800FDFD71 /* CoreDataStack.swift */; };
+		55E7503F252A546800FDFD71 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7503E252A546800FDFD71 /* StorageService.swift */; };
 		55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F3D2AF2505396D00F4E5FF /* ImageScrollViewController.swift */; };
 		55F69C682501E8F1008C1F63 /* LoadScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F69C672501E8F1008C1F63 /* LoadScreenView.xib */; };
 		55F69C6A2501E95B008C1F63 /* LoadScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F69C692501E95B008C1F63 /* LoadScreenView.swift */; };
@@ -100,6 +102,8 @@
 		55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		55E75036252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55E7503C252A519800FDFD71 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		55E7503E252A546800FDFD71 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		55F3D2AF2505396D00F4E5FF /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		55F69C672501E8F1008C1F63 /* LoadScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadScreenView.xib; sourceTree = "<group>"; };
 		55F69C692501E95B008C1F63 /* LoadScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenView.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 		55E7503B252A48E900FDFD71 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				55E7503C252A519800FDFD71 /* CoreDataStack.swift */,
+				55E7503E252A546800FDFD71 /* StorageService.swift */,
 				55E75033252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift */,
 				55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */,
 				55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */,
@@ -372,7 +378,9 @@
 				55E75038252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift in Sources */,
 				55C5467424D2D942002D3FFC /* LoginFormController.swift in Sources */,
 				55E7503A252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift in Sources */,
+				55E7503F252A546800FDFD71 /* StorageService.swift in Sources */,
 				55055660252705D5004E8239 /* Cachable.swift in Sources */,
+				55E7503D252A519800FDFD71 /* CoreDataStack.swift in Sources */,
 				5590B70124FAA71700637025 /* NewsFeedViewController.swift in Sources */,
 				55E0B03D24DD3EDF00B3AB07 /* Friend.swift in Sources */,
 				5596D89C24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift in Sources */,
