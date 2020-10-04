@@ -46,9 +46,9 @@ class StorageService {
         let context = coreDataStack.persistentContainer.viewContext
         let localPhoto = LocalPhoto(context: context)
         for photo in photos {
-            localPhoto.id = Int16(photo.id)
+            localPhoto.id = Int64(photo.id)
             localPhoto.albumID = Int16(photo.albumID)
-            localPhoto.date = Int16(photo.date)
+            localPhoto.date = Int64(photo.date)
             localPhoto.hasTags = photo.hasTags
             localPhoto.height = Int16(photo.height)
             localPhoto.ownerID = Int64(photo.ownerID)
@@ -67,18 +67,18 @@ class StorageService {
         var photos = [Photo]()
         let localPhotos = (try? context.fetch(LocalPhoto.fetchRequest()) as? [LocalPhoto] ?? [])
         for localPhoto in localPhotos! {
-        let photo = Photo(albumID: Int(localPhoto!.albumID),
-                          date: Int(localPhoto!.date),
-                          id: Int(localPhoto!.id),
-                          ownerID: Int(localPhoto!.ownerID),
-                          hasTags: localPhoto!.hasTags,
-                          height: Int(localPhoto!.height),
-                          photo130: localPhoto!.photo130!,
-                          photo604: localPhoto!.photo604!,
-                          photo75: localPhoto!.photo75!,
-                          photo807: localPhoto!.photo807!,
-                          text: localPhoto!.text!,
-                          width: Int(localPhoto!.width))
+            let photo = Photo(albumID: Int(localPhoto.albumID),
+                              date: Int(localPhoto.date),
+                              id: Int(localPhoto.id),
+                              ownerID: Int(localPhoto.ownerID),
+                              hasTags: localPhoto.hasTags,
+                              height: Int(localPhoto.height),
+                              photo130: localPhoto.photo130!,
+                              photo604: localPhoto.photo604!,
+                              photo75: localPhoto.photo75!,
+                              photo807: localPhoto.photo807!,
+                              text: localPhoto.text!,
+                              width: Int(localPhoto.width))
             photos.append(photo)
         }
         return photos

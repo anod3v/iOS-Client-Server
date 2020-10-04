@@ -32,9 +32,9 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
             [weak self] (result, error) in
 //            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
-            self!.storageService.saveUsers(users: (result?.response.items)!)
-            let users = self!.storageService.loadUsers()
-            debugPrint("users print:", users)
+            self!.storageService.savePhotos(photos: (result?.response.items)!)
+            let photos = self!.storageService.loadPhotos()
+            debugPrint("photos print:", photos)
         }
         
     }

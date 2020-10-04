@@ -18,8 +18,8 @@ extension LocalPhoto {
     }
 
     @NSManaged public var albumID: Int16
-    @NSManaged public var date: Int16
-    @NSManaged public var id: Int16
+    @NSManaged public var date: Int64
+    @NSManaged public var id: Int64
     @NSManaged public var ownerID: Int64
     @NSManaged public var hasTags: Bool
     @NSManaged public var height: Int16
