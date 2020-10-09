@@ -58,8 +58,8 @@ class StorageService {
             localPhoto.photo807 = photo.photo807
             localPhoto.text = photo.text
             localPhoto.width = Int16(photo.width)
-            coreDataStack.saveContext()
         }
+        coreDataStack.saveContext()
     }
     
     func loadPhotos() -> [Photo] {
