@@ -13,6 +13,8 @@ class UserFriendsTableViewController: UITableViewController {
     
     var networkService = NetworkService()
     
+    var storageService = StorageService()
+    
     var friends = [User]()
     
     var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "") // TODO: to find a better way to init?
@@ -38,6 +40,9 @@ class UserFriendsTableViewController: UITableViewController {
             [weak self] (result, error) in
 //            debugPrint("DEBUGPRINT:", result)
             self!.handleGetUserFriendsResponse(friends: (result?.response.items)!)
+            self!.storageService.saveUsers(users: (result?.response.items)!)
+            let users = self!.storageService.loadUsers()
+            debugPrint("users print:", users)
         }
         
         getFriendsDictionary()

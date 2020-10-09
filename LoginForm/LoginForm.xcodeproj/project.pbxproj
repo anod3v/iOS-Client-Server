@@ -10,6 +10,7 @@
 		5504B87624ED97E90026C508 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5504B87524ED97E90026C508 /* RoundView.swift */; };
 		55055660252705D5004E8239 /* Cachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5505565F252705D5004E8239 /* Cachable.swift */; };
 		551CDE7D2507A21900C05718 /* PaintCodeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */; };
+		55285E8925285F73005838F5 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55285E8725285F73005838F5 /* CoreDataModel.xcdatamodeld */; };
 		5544F42A24F2CA12008570A1 /* PostFullSizeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */; };
 		5544F42C24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */; };
 		55528DD125211691004C99B3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55528DD025211691004C99B3 /* NetworkService.swift */; };
@@ -42,6 +43,12 @@
 		55C5467424D2D942002D3FFC /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C5467324D2D942002D3FFC /* LoginFormController.swift */; };
 		55CC6C1E24FFD0E100698D97 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CC6C1D24FFD0E100698D97 /* SearchFooter.swift */; };
 		55E0B03D24DD3EDF00B3AB07 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E0B03C24DD3EDF00B3AB07 /* Friend.swift */; };
+		55E75037252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75033252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift */; };
+		55E75038252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */; };
+		55E75039252A48C200FDFD71 /* LocalUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */; };
+		55E7503A252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E75036252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift */; };
+		55E7503D252A519800FDFD71 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7503C252A519800FDFD71 /* CoreDataStack.swift */; };
+		55E7503F252A546800FDFD71 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7503E252A546800FDFD71 /* StorageService.swift */; };
 		55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F3D2AF2505396D00F4E5FF /* ImageScrollViewController.swift */; };
 		55F69C682501E8F1008C1F63 /* LoadScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55F69C672501E8F1008C1F63 /* LoadScreenView.xib */; };
 		55F69C6A2501E95B008C1F63 /* LoadScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55F69C692501E95B008C1F63 /* LoadScreenView.swift */; };
@@ -56,6 +63,7 @@
 		5504B87524ED97E90026C508 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		5505565F252705D5004E8239 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCodeExtension.swift; sourceTree = "<group>"; };
+		55285E8825285F73005838F5 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		5544F42924F2CA12008570A1 /* PostFullSizeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewController.swift; sourceTree = "<group>"; };
 		5544F42B24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFullSizeCollectionViewCell.swift; sourceTree = "<group>"; };
 		55528DD025211691004C99B3 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -90,6 +98,12 @@
 		55C5467324D2D942002D3FFC /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		55CC6C1D24FFD0E100698D97 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 		55E0B03C24DD3EDF00B3AB07 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Friend.swift; path = LoginForm/Model/Friend.swift; sourceTree = SOURCE_ROOT; };
+		55E75033252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalPhoto+CoreDataClass.swift"; sourceTree = "<group>"; };
+		55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalPhoto+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalUser+CoreDataClass.swift"; sourceTree = "<group>"; };
+		55E75036252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		55E7503C252A519800FDFD71 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		55E7503E252A546800FDFD71 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		55F3D2AF2505396D00F4E5FF /* ImageScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageScrollViewController.swift; sourceTree = "<group>"; };
 		55F69C672501E8F1008C1F63 /* LoadScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadScreenView.xib; sourceTree = "<group>"; };
 		55F69C692501E95B008C1F63 /* LoadScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadScreenView.swift; sourceTree = "<group>"; };
@@ -219,6 +233,7 @@
 		55E37CB0251CCB6900435E5F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55E7503B252A48E900FDFD71 /* CoreData */,
 				5581EA6D2524D313000C2BA8 /* Model.swift */,
 				55528DD025211691004C99B3 /* NetworkService.swift */,
 				5505565F252705D5004E8239 /* Cachable.swift */,
@@ -238,6 +253,20 @@
 				55F69C692501E95B008C1F63 /* LoadScreenView.swift */,
 			);
 			path = LoadScreen;
+			sourceTree = "<group>";
+		};
+		55E7503B252A48E900FDFD71 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				55E7503C252A519800FDFD71 /* CoreDataStack.swift */,
+				55E7503E252A546800FDFD71 /* StorageService.swift */,
+				55E75033252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift */,
+				55E75034252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift */,
+				55E75035252A48C200FDFD71 /* LocalUser+CoreDataClass.swift */,
+				55E75036252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift */,
+				55285E8725285F73005838F5 /* CoreDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		55EC5D2D24FE71F000E09FB8 /* NewsFeedViews */ = {
@@ -346,8 +375,12 @@
 			files = (
 				55B8647824DB278000FCA137 /* UserFriendsTableViewCell.swift in Sources */,
 				5590D38D24DC52690035E075 /* GroupsTableViewCell.swift in Sources */,
+				55E75038252A48C200FDFD71 /* LocalPhoto+CoreDataProperties.swift in Sources */,
 				55C5467424D2D942002D3FFC /* LoginFormController.swift in Sources */,
+				55E7503A252A48C200FDFD71 /* LocalUser+CoreDataProperties.swift in Sources */,
+				55E7503F252A546800FDFD71 /* StorageService.swift in Sources */,
 				55055660252705D5004E8239 /* Cachable.swift in Sources */,
+				55E7503D252A519800FDFD71 /* CoreDataStack.swift in Sources */,
 				5590B70124FAA71700637025 /* NewsFeedViewController.swift in Sources */,
 				55E0B03D24DD3EDF00B3AB07 /* Friend.swift in Sources */,
 				5596D89C24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift in Sources */,
@@ -361,11 +394,14 @@
 				55FFF46224E9D9B700AB1A9B /* LikeButton.swift in Sources */,
 				55FF075F24FE51A200D15D20 /* LikeBarView.swift in Sources */,
 				5590B70424FAAF7B00637025 /* NewsFeedCollectionViewCell.swift in Sources */,
+				55E75037252A48C200FDFD71 /* LocalPhoto+CoreDataClass.swift in Sources */,
 				5544F42C24F2CAB1008570A1 /* PostFullSizeCollectionViewCell.swift in Sources */,
 				55CC6C1E24FFD0E100698D97 /* SearchFooter.swift in Sources */,
 				5596D89924FBCF2700FD0914 /* PhotoCollageView.swift in Sources */,
 				5590D39224DC60520035E075 /* UserGroupsTableViewController.swift in Sources */,
 				55A489D8251CCEA9002A4CF1 /* Session.swift in Sources */,
+				55E75039252A48C200FDFD71 /* LocalUser+CoreDataClass.swift in Sources */,
+				55285E8925285F73005838F5 /* CoreDataModel.xcdatamodeld in Sources */,
 				55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */,
 				5590D39E24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift in Sources */,
 				5581EA6E2524D313000C2BA8 /* Model.swift in Sources */,
@@ -576,6 +612,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		55285E8725285F73005838F5 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				55285E8825285F73005838F5 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 55285E8825285F73005838F5 /* CoreData.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 55C5465024D2CC59002D3FFC /* Project object */;
 }

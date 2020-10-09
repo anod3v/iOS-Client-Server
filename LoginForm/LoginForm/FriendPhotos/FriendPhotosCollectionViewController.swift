@@ -12,6 +12,8 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
     
     var networkService = NetworkService()
     
+    let storageService = StorageService()
+    
     var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "")
     
     var photos = [Photo]()
@@ -30,6 +32,9 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
             [weak self] (result, error) in
 //            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
+            self!.storageService.savePhotos(photos: (result?.response.items)!)
+            let photos = self!.storageService.loadPhotos()
+            debugPrint("photos print:", photos)
         }
         
     }
