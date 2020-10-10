@@ -106,11 +106,10 @@ class UserFriendsTableViewController: UITableViewController {
     }
     
     func handleGetUserFriendsResponse(friends: [User]) {
-        self.friends = friends
         self.storageService.deleteAllData(entity: "LocalUser")
         self.storageService.saveUsers(users: friends)
-        let users = self.storageService.loadUsers()
-        debugPrint("users print:", users)
+        self.friends = self.storageService.loadUsers()
+        debugPrint("users print:", self.friends)
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     
