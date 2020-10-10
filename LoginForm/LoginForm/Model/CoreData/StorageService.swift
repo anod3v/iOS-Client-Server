@@ -7,10 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 class StorageService {
     
     let coreDataStack = CoreDataStack(modelName: "CoreDataModel")
+    
+    func deleteAllData(entity: String)
+    {
+        let context = coreDataStack.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+
+        do
+        {
+            let results = try context.fetch(fetchRequest)
+            for managedObject in results
+            {
+                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                context.delete(managedObjectData)
+            }
+        } catch let error as NSError {
+            print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
+        }
+    }
     
     func saveUsers(users:[User]) {
         let context = coreDataStack.persistentContainer.viewContext

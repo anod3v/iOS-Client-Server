@@ -33,8 +33,8 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
 //            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
             self!.storageService.savePhotos(photos: (result?.response.items)!)
-            let photos = self!.storageService.loadPhotos()
-            debugPrint("photos print:", photos)
+//            let photos = self!.storageService.loadPhotos()
+//            debugPrint("photos print:", photos)
         }
         
     }

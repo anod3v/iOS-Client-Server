@@ -40,9 +40,9 @@ class UserFriendsTableViewController: UITableViewController {
             [weak self] (result, error) in
 //            debugPrint("DEBUGPRINT:", result)
             self!.handleGetUserFriendsResponse(friends: (result?.response.items)!)
-            self!.storageService.saveUsers(users: (result?.response.items)!)
-            let users = self!.storageService.loadUsers()
-            debugPrint("users print:", users)
+//            self!.storageService.saveUsers(users: (result?.response.items)!)
+//            let users = self!.storageService.loadUsers()
+//            debugPrint("users print:", users)
         }
         
         getFriendsDictionary()
@@ -107,6 +107,10 @@ class UserFriendsTableViewController: UITableViewController {
     
     func handleGetUserFriendsResponse(friends: [User]) {
         self.friends = friends
+        self.storageService.deleteAllData(entity: "LocalUser")
+        self.storageService.saveUsers(users: friends)
+        let users = self.storageService.loadUsers()
+        debugPrint("users print:", users)
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     
