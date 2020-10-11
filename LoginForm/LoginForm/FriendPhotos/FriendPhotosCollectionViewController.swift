@@ -32,15 +32,16 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
             [weak self] (result, error) in
 //            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
-            self!.storageService.savePhotos(photos: (result?.response.items)!)
-//            let photos = self!.storageService.loadPhotos()
-//            debugPrint("photos print:", photos)
         }
         
     }
     
     func handleGetUserPhotosResponse(photos: [Photo]) {
-        self.photos = photos
+        //        self.photos = photos
+        self.storageService.deleteAllData(entity: "LocalPhoto")
+        self.storageService.savePhotos(photos: photos)
+        self.photos = self.storageService.loadPhotos()
+        debugPrint("photos print:", self.photos)
         DispatchQueue.main.async { self.collectionView.reloadData() }
     }
     
@@ -64,11 +65,11 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
         
         let imageVC = storyboard?.instantiateViewController(withIdentifier: "ImageScrollViewController") as! ImageScrollViewController
         
-//        imageVC.imageURLs = photos as! [URL]
+        //        imageVC.imageURLs = photos as! [URL]
         
-//        imageVC.selectedImageURL = currentCell.post.photoUrls.first
-//
-//        self.show(imageVC, sender: nil)
+        //        imageVC.selectedImageURL = currentCell.post.photoUrls.first
+        //
+        //        self.show(imageVC, sender: nil)
         
     }
     

@@ -109,7 +109,7 @@ class UserFriendsTableViewController: UITableViewController {
         self.storageService.deleteAllData(entity: "LocalUser")
         self.storageService.saveUsers(users: friends)
         self.friends = self.storageService.loadUsers()
-        debugPrint("users print:", self.friends)
+//        debugPrint("users print:", self.friends)
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     

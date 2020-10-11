@@ -93,11 +93,11 @@ class StorageService {
                               ownerID: Int(localPhoto.ownerID),
                               hasTags: localPhoto.hasTags,
                               height: Int(localPhoto.height),
-                              photo130: localPhoto.photo130!,
-                              photo604: localPhoto.photo604!,
-                              photo75: localPhoto.photo75!,
-                              photo807: localPhoto.photo807!,
-                              text: localPhoto.text!,
+                              photo130: localPhoto.photo130,
+                              photo604: localPhoto.photo604,
+                              photo75: localPhoto.photo75,
+                              photo807: localPhoto.photo807,
+                              text: localPhoto.text,
                               width: Int(localPhoto.width))
             photos.append(photo)
         }
