@@ -41,7 +41,7 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
         self.storageService.deleteAllData(entity: "LocalPhoto")
         self.storageService.savePhotos(photos: photos)
         self.photos = self.storageService.loadPhotos()
-        debugPrint("photos print:", self.photos)
+//        debugPrint("photos print:", self.photos)
         DispatchQueue.main.async { self.collectionView.reloadData() }
     }
     
