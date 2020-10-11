@@ -13,6 +13,20 @@ class StorageService {
     
     let coreDataStack = CoreDataStack(modelName: "CoreDataModel")
     
+    lazy var viewContext: NSManagedObjectContext = {
+        return coreDataStack.persistentContainer.viewContext
+    }()
+
+    lazy var cacheContext: NSManagedObjectContext = {
+        return coreDataStack.persistentContainer.newBackgroundContext()
+    }()
+
+    lazy var updateContext: NSManagedObjectContext = {
+        let _updateContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        _updateContext.parent = self.viewContext
+        return _updateContext
+    }()
+    
     func deleteAllData(entity: String)
     {
         let context = coreDataStack.persistentContainer.viewContext
@@ -63,9 +77,9 @@ class StorageService {
     }
     
     func savePhotos(photos:[Photo]) {
-        let context = coreDataStack.persistentContainer.viewContext
-        let localPhoto = LocalPhoto(context: context)
+        let context = updateContext
         for photo in photos {
+            let localPhoto = LocalPhoto(context: context)
             localPhoto.id = Int64(photo.id)
             localPhoto.albumID = Int16(photo.albumID)
             localPhoto.date = Int64(photo.date)
@@ -83,7 +97,7 @@ class StorageService {
     }
     
     func loadPhotos() -> [Photo] {
-        let context = coreDataStack.persistentContainer.viewContext
+        let context = updateContext
         var photos = [Photo]()
         let localPhotos = (try? context.fetch(LocalPhoto.fetchRequest()) as? [LocalPhoto] ?? [])
         for localPhoto in localPhotos! {

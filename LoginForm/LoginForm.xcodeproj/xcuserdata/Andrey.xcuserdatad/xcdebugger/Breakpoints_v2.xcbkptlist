@@ -512,7 +512,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
             endingLineNumber = "75"
-            landmarkName = "savePhotos(photos:)"
+            landmarkName = "loadUsers()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -526,25 +526,9 @@
             filePath = "LoginForm/Model/CoreData/StorageService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "loadPhotos()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5E53F98D-67DD-430E-A0B5-28D7509288AA"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LoginForm/Model/CoreData/StorageService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "loadPhotos()"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "savePhotos(photos:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
