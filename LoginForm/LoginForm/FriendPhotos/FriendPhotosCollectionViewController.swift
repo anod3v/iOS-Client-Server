@@ -30,18 +30,14 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
         
         _ = networkService.getUserPhotos(userId: selectedFriend.id) {
             [weak self] (result, error) in
-//            debugPrint("DEBUGPRINTPHOTO:", result)
             self!.handleGetUserPhotosResponse(photos: (result?.response.items)!)
         }
         
     }
     
     func handleGetUserPhotosResponse(photos: [Photo]) {
-        //        self.photos = photos
-        self.storageService.deleteAllData(entity: "LocalPhoto")
         self.storageService.savePhotos(photos: photos)
         self.photos = self.storageService.loadPhotos()
-//        debugPrint("photos print:", self.photos)
         DispatchQueue.main.async { self.collectionView.reloadData() }
     }
     
