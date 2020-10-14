@@ -72,7 +72,6 @@ class StorageService {
             localUser.setValue(user.id, forKey: "id")
             localUser.setValue(user.firstName, forKey: "firstName")
             localUser.setValue(user.lastName, forKey: "lastName")
-            localUser.setValue(user.online, forKey: "online")
             localUser.setValue(user.trackCode, forKey: "trackCode")
             localUser.setValue(user.photo_200, forKey: "photo_200")
         }
@@ -88,7 +87,6 @@ class StorageService {
                             firstName: localUser.firstName!,
                             lastName: localUser.lastName!,
                             photo_200: localUser.photo_200!,
-                            online: Int(localUser.online),
                             trackCode: localUser.trackCode!)
             users.append(user)
         }

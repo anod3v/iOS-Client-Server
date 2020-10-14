@@ -288,7 +288,6 @@ class NetworkService {
       let id: Int
       let firstName, lastName: String
       let photo_200: String
-      let online: Int
       let trackCode: String
 
       enum CodingKeys: String, CodingKey {
@@ -296,7 +295,6 @@ class NetworkService {
           case firstName = "first_name"
           case lastName = "last_name"
           case photo_200 = "photo_200"
-          case online
           case trackCode = "track_code"
       }
   }

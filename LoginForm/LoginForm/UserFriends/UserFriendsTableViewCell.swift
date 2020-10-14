@@ -13,7 +13,7 @@ class UserFriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var friendImage: RoundImageView!
     @IBOutlet weak var friendName: UILabel!
 
-    var friend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "")
+    var friend = User(id: Int(), firstName: "", lastName: "", photo_200: "", trackCode: "")
     
     override func awakeFromNib() {
         super.awakeFromNib()

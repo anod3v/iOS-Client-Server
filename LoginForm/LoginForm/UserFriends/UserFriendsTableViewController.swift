@@ -17,7 +17,7 @@ class UserFriendsTableViewController: UITableViewController {
     
     var friends = [User]()
     
-    var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "") // TODO: to find a better way to init?
+    var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", trackCode: "") // TODO: to find a better way to init?
     
     var friendsDictionary = [String: [User]]()
     

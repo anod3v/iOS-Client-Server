@@ -14,7 +14,7 @@ class FriendPhotosCollectionViewController: UICollectionViewController {
     
     let storageService = StorageService()
     
-    var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", online: Int(), trackCode: "")
+    var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", trackCode: "")
     
     var photos = [Photo]()
     
