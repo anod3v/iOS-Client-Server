@@ -23,11 +23,11 @@ extension LocalPhoto {
     @NSManaged public var ownerID: Int64
     @NSManaged public var hasTags: Bool
     @NSManaged public var height: Int16
-    @NSManaged public var photo130: String?
-    @NSManaged public var photo604: String?
-    @NSManaged public var photo75: String?
-    @NSManaged public var photo807: String?
-    @NSManaged public var text: String?
+    @NSManaged public var photo130: String
+    @NSManaged public var photo604: String
+    @NSManaged public var photo75: String
+    @NSManaged public var photo807: String
+    @NSManaged public var text: String
     @NSManaged public var width: Int16
 
 }
