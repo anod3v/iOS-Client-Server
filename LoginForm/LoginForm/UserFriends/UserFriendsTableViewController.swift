@@ -39,13 +39,8 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchedResultController = self.storageService.getFetchedResultController()
+        fetchedResultController = storageService.getFetchedResultController()
         fetchedResultController.delegate = self
-        do {
-            try fetchedResultController.performFetch()
-        } catch _ {
-        }
-        
         
         _ = networkService.getUserFriends(userId: Session.shared.userId!) {
             [weak self] (result, error) in
@@ -115,8 +110,13 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     
     func handleGetUserFriendsResponse(friends: [User]) {
         self.storageService.saveUsers(users: friends)
-        self.friends = self.storageService.loadUsers()
+//        self.friends = self.storageService.loadUsers()
 //        debugPrint("users print:", self.friends)
+
+        do {
+            try fetchedResultController.performFetch()
+        } catch _ {
+        }
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     
@@ -155,38 +155,45 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        getFriendsDictionary()
-        return friendSectionTitles.count
+//        getFriendsDictionary()
+//        return friendSectionTitles.count
+        let numberOfSections = fetchedResultController.sections?.count
+        return numberOfSections!
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let friendKey = friendSectionTitles[section]
-        if let friendValues = friendsDictionary[friendKey] {
-            return friendValues.count
-        }
+//        let friendKey = friendSectionTitles[section]
+//        if let friendValues = friendsDictionary[friendKey] {
+//            return friendValues.count
+//        }
+//
+//        return 0
         
-        return 0
+        let numberOfRowsInSection = fetchedResultController.sections?[section].numberOfObjects
+        return numberOfRowsInSection!
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! UserFriendsTableViewCell
-        
-        let friendKey = friendSectionTitles[indexPath.section]
-        if let friendValues = friendsDictionary[friendKey] {
-            cell.configure(for: friendValues[indexPath.row])
-        }
-        
+//
+//        let friendKey = friendSectionTitles[indexPath.section]
+//        if let friendValues = friendsDictionary[friendKey] {
+//            cell.configure(for: friendValues[indexPath.row])
+//        }
+        let friend = fetchedResultController.object(at: indexPath as IndexPath) as! LocalUser
+        cell.configure(for: friend)
+
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
-        let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
-        friendPhotoVC.selectedFriend = cell.friend
-        self.show(friendPhotoVC, sender: nil)
-        
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
+//        let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
+//        friendPhotoVC.selectedFriend = cell.friend
+//        self.show(friendPhotoVC, sender: nil)
+//        
+//    }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return friendSectionTitles[section]
