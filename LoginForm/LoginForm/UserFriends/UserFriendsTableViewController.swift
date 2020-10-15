@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import CoreData
 
 
-class UserFriendsTableViewController: UITableViewController {
+class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsControllerDelegate {
     
     var networkService = NetworkService()
     
@@ -33,8 +34,18 @@ class UserFriendsTableViewController: UITableViewController {
     
     //--------------
     
+    var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchedResultController = self.storageService.getFetchedResultController()
+        fetchedResultController.delegate = self
+        do {
+            try fetchedResultController.performFetch()
+        } catch _ {
+        }
+        
         
         _ = networkService.getUserFriends(userId: Session.shared.userId!) {
             [weak self] (result, error) in
