@@ -32,7 +32,7 @@ class StorageService {
     var fetchedResultController: NSFetchedResultsController = NSFetchedResultsController<NSFetchRequestResult>()
     
     func getFetchedResultController() -> NSFetchedResultsController<NSFetchRequestResult> {
-        let context = coreDataStack.persistentContainer.viewContext
+        let context = updateContext
         fetchedResultController = NSFetchedResultsController(fetchRequest: taskFetchRequest(), managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         return fetchedResultController
     }
