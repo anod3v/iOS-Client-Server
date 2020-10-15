@@ -46,25 +46,6 @@ class StorageService {
         }
     }
     
-    func getUpdate() {
-        let context = coreDataStack.persistentContainer.viewContext
-        // Add Observer
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.addObserver(self, selector: #selector(contextObjectsDidChange(_:)), name: NSNotification.Name.NSManagedObjectContextObjectsDidChange, object: context)
-        notificationCenter.addObserver(self, selector: #selector(contextObjectsDidChange(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: context)
-        notificationCenter.addObserver(self, selector: #selector(contextDidSave(_:)), name: NSNotification.Name.NSManagedObjectContextDidSave, object: context)
-    }
-    
-    @objc func contextObjectsDidChange(_ notification: Notification) {
-        print(notification)
-    }
-    func contextWillSave(_ notification: Notification) {
-        print(notification)
-    }
-    @objc func contextDidSave(_ notification: Notification) {
-        print(notification)
-    }
-    
     func saveUsers(users:[User]) {
         let context = updateContext
         for user in users {
