@@ -111,10 +111,11 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     func handleGetUserFriendsResponse(friends: [User]) {
         self.storageService.saveUsers(users: friends)
 //        self.friends = self.storageService.loadUsers()
-//        debugPrint("users print:", self.friends)
+        debugPrint("users print:", friends)
 
         do {
             try fetchedResultController.performFetch()
+            
         } catch _ {
         }
         DispatchQueue.main.async { self.tableView.reloadData() }
@@ -157,8 +158,8 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
         // #warning Incomplete implementation, return the number of sections
 //        getFriendsDictionary()
 //        return friendSectionTitles.count
-        let numberOfSections = fetchedResultController.sections?.count
-        return numberOfSections!
+        guard let numberOfSections = fetchedResultController.sections?.count else { return 0 }
+        return numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -192,16 +193,16 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
 //        let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
 //        friendPhotoVC.selectedFriend = cell.friend
 //        self.show(friendPhotoVC, sender: nil)
-//        
+//
 //    }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return friendSectionTitles[section]
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return friendSectionTitles[section]
+//    }
     
-     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return friendSectionTitles
-    }
+//     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        return friendSectionTitles
+//    }
     
 }
 
