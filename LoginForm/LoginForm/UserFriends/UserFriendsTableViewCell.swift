@@ -27,7 +27,7 @@ class UserFriendsTableViewCell: UITableViewCell {
     }
     
     func configure(for model: LocalUser) {
-        friendName.text = "\(model.firstName) \(model.lastName)"
+        friendName.text = "\(model.firstName!) \(model.lastName!)"
 //        friend = model
         friendImage.loadImageUsingCacheWithURLString(model.photo_200!, placeHolder: nil) { (bool) in
             //perform actions if needed
