@@ -110,7 +110,7 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     
     func handleGetUserFriendsResponse(friends: [User]) {
         self.storageService.saveUsers(users: friends)
-        debugPrint("users print:", friends)
+//        debugPrint("users print:", friends)
 
         do {
             try fetchedResultController.performFetch()
