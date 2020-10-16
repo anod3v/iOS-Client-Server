@@ -110,7 +110,6 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     
     func handleGetUserFriendsResponse(friends: [User]) {
         self.storageService.saveUsers(users: friends)
-//        self.friends = self.storageService.loadUsers()
         debugPrint("users print:", friends)
 
         do {
@@ -155,20 +154,11 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-//        getFriendsDictionary()
-//        return friendSectionTitles.count
         guard let numberOfSections = fetchedResultController.sections?.count else { return 0 }
         return numberOfSections
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let friendKey = friendSectionTitles[section]
-//        if let friendValues = friendsDictionary[friendKey] {
-//            return friendValues.count
-//        }
-//
-//        return 0
         
         let numberOfRowsInSection = fetchedResultController.sections?[section].numberOfObjects
         return numberOfRowsInSection!
@@ -177,33 +167,11 @@ class UserFriendsTableViewController: UITableViewController,  NSFetchedResultsCo
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell", for: indexPath) as! UserFriendsTableViewCell
-//
-//        let friendKey = friendSectionTitles[indexPath.section]
-//        if let friendValues = friendsDictionary[friendKey] {
-//            cell.configure(for: friendValues[indexPath.row])
-//        }
         let friend = fetchedResultController.object(at: indexPath as IndexPath) as! LocalUser
         cell.configure(for: friend)
 
         return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath) as! UserFriendsTableViewCell
-//        let friendPhotoVC = storyboard?.instantiateViewController(withIdentifier: "FriendPhotosCollectionViewController") as! FriendPhotosCollectionViewController
-//        friendPhotoVC.selectedFriend = cell.friend
-//        self.show(friendPhotoVC, sender: nil)
-//
-//    }
-    
-//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return friendSectionTitles[section]
-//    }
-    
-//     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-//        return friendSectionTitles
-//    }
-    
 }
 
 extension UserFriendsTableViewController: UISearchResultsUpdating {
