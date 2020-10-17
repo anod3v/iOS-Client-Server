@@ -144,8 +144,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "166"
             endingLineNumber = "166"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -160,8 +160,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "127"
             endingLineNumber = "127"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -176,8 +176,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -192,8 +192,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "152"
             endingLineNumber = "152"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -208,8 +208,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "156"
             endingLineNumber = "156"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -224,8 +224,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "158"
             endingLineNumber = "158"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserPhotos(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -240,8 +240,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "291"
             endingLineNumber = "291"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "User"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "8BC6EEE9-5392-4053-9661-07C46938FFF3 - caa5b5baa2044028"
@@ -288,8 +288,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "294"
             endingLineNumber = "294"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "CodingKeys"
+            landmarkType = "13">
             <Locations>
                <Location
                   uuid = "92CA5027-BF31-468F-BF32-30B15BBC9B8A - caa5b5baa2044028"
@@ -328,7 +328,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "31DB116F-139B-4E47-8258-8FE37CFE27E4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -336,15 +336,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "223"
             endingLineNumber = "223"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "36F16674-1C5F-45A8-AD22-D1A7AF3A293E"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -352,15 +352,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "233"
             endingLineNumber = "233"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "0A392990-E4A8-4601-872E-99D2FA9478CC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -368,15 +368,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "251"
             endingLineNumber = "251"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A3EB2BDC-23E1-4185-8F28-829718273E08"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -384,8 +384,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
             endingLineNumber = "257"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -400,8 +400,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "313"
             endingLineNumber = "313"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "Photo"
+            landmarkType = "14">
             <Locations>
                <Location
                   uuid = "9CBDDD96-8AB3-42D3-96F9-E198F5410AB0 - 41b011a2bc1db035"
@@ -464,8 +464,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "278"
             endingLineNumber = "278"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "Welcome"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -480,8 +480,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "284"
             endingLineNumber = "284"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "Response"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -616,7 +616,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "69F9B064-C2E3-4DF3-B595-E8CD7C3AFF14"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -624,15 +624,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "261"
             endingLineNumber = "261"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FF253361-F68F-4B3E-8CB1-F57A503AFFE0"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -640,15 +640,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
             endingLineNumber = "247"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CACD2A69-46D2-44A7-BA0D-381937D22899"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
@@ -664,7 +664,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "26442C5D-9719-42F0-B5CF-8E5B62361B45"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
@@ -677,7 +677,7 @@
             <Locations>
                <Location
                   uuid = "26442C5D-9719-42F0-B5CF-8E5B62361B45 - 97b23e660b746641"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.UserFriendsTableViewController.viewDidLoad() -&gt; ()"
@@ -692,7 +692,7 @@
                </Location>
                <Location
                   uuid = "26442C5D-9719-42F0-B5CF-8E5B62361B45 - a5bd608f3fd6f279"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 (Swift.Optional&lt;LoginForm.Welcome&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in LoginForm.UserFriendsTableViewController.viewDidLoad() -&gt; ()"
@@ -712,7 +712,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1B2E4C3F-DD1D-498A-8A9A-78D215FE8D56"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
@@ -725,7 +725,7 @@
             <Locations>
                <Location
                   uuid = "1B2E4C3F-DD1D-498A-8A9A-78D215FE8D56 - 88931df5adf3b829"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "LoginForm.UserFriendsTableViewController.handleGetUserFriendsResponse(friends: Swift.Array&lt;LoginForm.User&gt;) -&gt; ()"
@@ -740,7 +740,7 @@
                </Location>
                <Location
                   uuid = "1B2E4C3F-DD1D-498A-8A9A-78D215FE8D56 - 317ff42152d048bc"
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "closure #1 () -&gt; () in LoginForm.UserFriendsTableViewController.handleGetUserFriendsResponse(friends: Swift.Array&lt;LoginForm.User&gt;) -&gt; ()"
@@ -768,15 +768,15 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "248"
             endingLineNumber = "248"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "16E967EA-7079-4431-A09A-CF695F8AF2CC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/Model/NetworkService.swift"
@@ -784,8 +784,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "240"
             endingLineNumber = "240"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getUserFriends(userId:callback:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

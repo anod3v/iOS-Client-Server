@@ -67,6 +67,10 @@ extension LoginFormController: WKNavigationDelegate {
             }
         }
         
+        
+        
+        try? Auth.auth().signOut()
+        
         singInToFirebase(withUserID: Int(userId!)!) { [unowned self] in
         
             let userFriendsVC = self.storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
