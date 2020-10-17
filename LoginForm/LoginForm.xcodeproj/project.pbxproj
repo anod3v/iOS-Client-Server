@@ -30,6 +30,7 @@
 		5596D89924FBCF2700FD0914 /* PhotoCollageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596D89824FBCF2700FD0914 /* PhotoCollageView.swift */; };
 		5596D89C24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596D89A24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift */; };
 		5596D89D24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5596D89B24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.xib */; };
+		5597D9E9253B4177000DC8F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5597D9E8253B4177000DC8F7 /* GoogleService-Info.plist */; };
 		55A11B1124FD349900CDDAB8 /* PhotosCollageLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A11B1024FD349900CDDAB8 /* PhotosCollageLayout.swift */; };
 		55A489D8251CCEA9002A4CF1 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A489D7251CCEA9002A4CF1 /* Session.swift */; };
 		55B8647624DB244000FCA137 /* UserFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B8647524DB244000FCA137 /* UserFriendsTableViewController.swift */; };
@@ -57,9 +58,12 @@
 		55FF075D24FE517800D15D20 /* LikeBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55FF075C24FE517800D15D20 /* LikeBarView.xib */; };
 		55FF075F24FE51A200D15D20 /* LikeBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FF075E24FE51A200D15D20 /* LikeBarView.swift */; };
 		55FFF46224E9D9B700AB1A9B /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55FFF46124E9D9B700AB1A9B /* LikeButton.swift */; };
+		D2DE60D5F9E51F07F4BD6431 /* Pods_LoginForm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE481CE4830F4873893EEEA1 /* Pods_LoginForm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		27A58FDE1E36F303225F8571 /* Pods-LoginForm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginForm.release.xcconfig"; path = "Target Support Files/Pods-LoginForm/Pods-LoginForm.release.xcconfig"; sourceTree = "<group>"; };
+		30CD112119EE5D4F7708C31A /* Pods-LoginForm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginForm.debug.xcconfig"; path = "Target Support Files/Pods-LoginForm/Pods-LoginForm.debug.xcconfig"; sourceTree = "<group>"; };
 		5504B87524ED97E90026C508 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 		5505565F252705D5004E8239 /* Cachable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cachable.swift; sourceTree = "<group>"; };
 		551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintCodeExtension.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		5596D89824FBCF2700FD0914 /* PhotoCollageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollageView.swift; sourceTree = "<group>"; };
 		5596D89A24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollageCollectionViewCell.swift; sourceTree = "<group>"; };
 		5596D89B24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollageCollectionViewCell.xib; sourceTree = "<group>"; };
+		5597D9E8253B4177000DC8F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		55A11B1024FD349900CDDAB8 /* PhotosCollageLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollageLayout.swift; sourceTree = "<group>"; };
 		55A489D7251CCEA9002A4CF1 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		55B8647524DB244000FCA137 /* UserFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		55FF075C24FE517800D15D20 /* LikeBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LikeBarView.xib; sourceTree = "<group>"; };
 		55FF075E24FE51A200D15D20 /* LikeBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBarView.swift; sourceTree = "<group>"; };
 		55FFF46124E9D9B700AB1A9B /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		DE481CE4830F4873893EEEA1 /* Pods_LoginForm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginForm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2DE60D5F9E51F07F4BD6431 /* Pods_LoginForm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +184,8 @@
 			children = (
 				55C5465A24D2CC59002D3FFC /* LoginForm */,
 				55C5465924D2CC59002D3FFC /* Products */,
+				909C749C21436E5CDF6FC5BE /* Pods */,
+				9F0077C69D6D277E25458BD2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +214,7 @@
 				55C5465D24D2CC5A002D3FFC /* SceneDelegate.swift */,
 				551CDE7C2507A21900C05718 /* PaintCodeExtension.swift */,
 				55C5465B24D2CC59002D3FFC /* AppDelegate.swift */,
+				5597D9E8253B4177000DC8F7 /* GoogleService-Info.plist */,
 				55C5466124D2CC5A002D3FFC /* Main.storyboard */,
 				55C5466424D2CC5D002D3FFC /* Assets.xcassets */,
 				55C5466624D2CC5D002D3FFC /* LaunchScreen.storyboard */,
@@ -295,6 +305,24 @@
 			path = NewsFeedViewController;
 			sourceTree = "<group>";
 		};
+		909C749C21436E5CDF6FC5BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30CD112119EE5D4F7708C31A /* Pods-LoginForm.debug.xcconfig */,
+				27A58FDE1E36F303225F8571 /* Pods-LoginForm.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9F0077C69D6D277E25458BD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE481CE4830F4873893EEEA1 /* Pods_LoginForm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55C5466C24D2CC5D002D3FFC /* Build configuration list for PBXNativeTarget "LoginForm" */;
 			buildPhases = (
+				17675C0028786D81E0C77097 /* [CP] Check Pods Manifest.lock */,
 				55C5465424D2CC59002D3FFC /* Sources */,
 				55C5465524D2CC59002D3FFC /* Frameworks */,
 				55C5465624D2CC59002D3FFC /* Resources */,
+				C8E4C9F4BAFCBEEEA8BF9A1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -361,12 +391,55 @@
 				55FF075D24FE517800D15D20 /* LikeBarView.xib in Resources */,
 				55C5466524D2CC5D002D3FFC /* Assets.xcassets in Resources */,
 				55C5466324D2CC5A002D3FFC /* Main.storyboard in Resources */,
+				5597D9E9253B4177000DC8F7 /* GoogleService-Info.plist in Resources */,
 				5596D89724FBCEB100FD0914 /* PhotoCollageView.xib in Resources */,
 				5596D89D24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17675C0028786D81E0C77097 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LoginForm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8E4C9F4BAFCBEEEA8BF9A1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginForm/Pods-LoginForm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LoginForm/Pods-LoginForm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LoginForm/Pods-LoginForm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55C5465424D2CC59002D3FFC /* Sources */ = {
@@ -554,6 +627,7 @@
 		};
 		55C5466D24D2CC5D002D3FFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30CD112119EE5D4F7708C31A /* Pods-LoginForm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,6 +647,7 @@
 		};
 		55C5466E24D2CC5D002D3FFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27A58FDE1E36F303225F8571 /* Pods-LoginForm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

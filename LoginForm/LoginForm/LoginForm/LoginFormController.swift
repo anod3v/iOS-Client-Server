@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import FirebaseAuth
 
 class LoginFormController: UIViewController {
     
@@ -55,10 +56,24 @@ extension LoginFormController: WKNavigationDelegate {
         
         Session.shared.userId = Int(userId!)
         
-        let userFriendsVC = storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
+        func singInToFirebase(withUserID userID: Int, success: @escaping () -> Void) {
+            Auth.auth().signInAnonymously { (result, error) in
+                switch error {
+                case let .some(error):
+                    debugPrint(error.localizedDescription)
+                default:
+                    success()
+                }
+            }
+        }
+        
+        singInToFirebase(withUserID: Int(userId!)!) { [unowned self] in
+        
+            let userFriendsVC = self.storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
         
         userFriendsVC.modalPresentationStyle = .fullScreen
         self.present(userFriendsVC, animated: true, completion: nil)
+        }
         
         decisionHandler(.cancel)
     }
