@@ -20,7 +20,7 @@ class FirebaseService {
         let referenceChild = Database.database().reference().child("Users")
         let value: [Int] = friendIDs
         
-        referenceChild.child("\(userID)").setValue(friendIDs)
+        referenceChild.child("\(userID)").child("user's friends IDs").setValue(friendIDs)
     }
 
 }
