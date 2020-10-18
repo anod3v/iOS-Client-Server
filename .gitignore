@@ -1,0 +1,10 @@
+
+LoginForm/Podfile
+
+LoginForm/Podfile.lock
+
+LoginForm/Pods/Firebase/
+
+LoginForm/Pods/FirebaseAnalytics/Frameworks/FIRAnalyticsConnector.framework/
+
+LoginForm/Pods/
