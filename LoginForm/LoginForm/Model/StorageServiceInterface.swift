@@ -7,7 +7,7 @@
 //
 
 protocol StorageServiceInterface {
-    func saveHuman(name: String, age: Int)
-    func readHumabList() -> [HumanEntity]
-    func readHumabList(callback: @escaping ([HumanEntity]) -> Void)
+    func saveHuman(userID: Int, name: String, age: Int)
+//    func readHumabList() -> [HumanEntity]
+//    func readHumabList(callback: @escaping ([HumanEntity]) -> Void)
 }

@@ -14,9 +14,9 @@
             filePath = "LoginForm/LoginForm/LoginFormController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "singInToFirebase(withUserID:success:)"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "singInAnonymouslyToFirebase(success:)"
             landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>

@@ -16,6 +16,8 @@ class LoginFormController: UIViewController {
     
     var networkService = NetworkService()
     
+    let service: StorageServiceInterface = FirebaseService()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +58,7 @@ extension LoginFormController: WKNavigationDelegate {
         
         Session.shared.userId = Int(userId!)
         
-        func singInToFirebase(withUserID userID: Int, success: @escaping () -> Void) {
+        func singInAnonymouslyToFirebase(success: @escaping () -> Void) {
             Auth.auth().signInAnonymously { (result, error) in
                 switch error {
                 case let .some(error):
@@ -69,9 +71,11 @@ extension LoginFormController: WKNavigationDelegate {
         
         
         
-        try? Auth.auth().signOut()
+//        try? Auth.auth().signOut()
         
-        singInToFirebase(withUserID: Int(userId!)!) { [unowned self] in
+        singInAnonymouslyToFirebase() { [unowned self] in
+            
+            self.service.saveHuman(userID: Session.shared.userId!, name: "Oleg", age: 22)
         
             let userFriendsVC = self.storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
         

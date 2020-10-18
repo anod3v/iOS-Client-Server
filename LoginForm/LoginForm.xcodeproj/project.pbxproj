@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,8 @@
 		5590D39424DC615D0035E075 /* UserGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590D39324DC615D0035E075 /* UserGroupsTableViewCell.swift */; };
 		5590D39C24DC7C410035E075 /* FriendPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590D39B24DC7C410035E075 /* FriendPhotosCollectionViewCell.swift */; };
 		5590D39E24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590D39D24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift */; };
+		5590EAA8253C640D00F008A7 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590EAA7253C640D00F008A7 /* FirebaseService.swift */; };
+		5590EAAA253C647100F008A7 /* StorageServiceInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590EAA9253C647100F008A7 /* StorageServiceInterface.swift */; };
 		5596D89724FBCEB100FD0914 /* PhotoCollageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5596D89624FBCEB100FD0914 /* PhotoCollageView.xib */; };
 		5596D89924FBCF2700FD0914 /* PhotoCollageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596D89824FBCF2700FD0914 /* PhotoCollageView.swift */; };
 		5596D89C24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5596D89A24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift */; };
@@ -83,6 +85,8 @@
 		5590D39324DC615D0035E075 /* UserGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		5590D39B24DC7C410035E075 /* FriendPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
 		5590D39D24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		5590EAA7253C640D00F008A7 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		5590EAA9253C647100F008A7 /* StorageServiceInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceInterface.swift; sourceTree = "<group>"; };
 		5596D89624FBCEB100FD0914 /* PhotoCollageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollageView.xib; sourceTree = "<group>"; };
 		5596D89824FBCF2700FD0914 /* PhotoCollageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollageView.swift; sourceTree = "<group>"; };
 		5596D89A24FBD3AF00FD0914 /* PhotoCollageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -244,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				55E7503B252A48E900FDFD71 /* CoreData */,
+				5590EAA7253C640D00F008A7 /* FirebaseService.swift */,
+				5590EAA9253C647100F008A7 /* StorageServiceInterface.swift */,
 				5581EA6D2524D313000C2BA8 /* Model.swift */,
 				55528DD025211691004C99B3 /* NetworkService.swift */,
 				5505565F252705D5004E8239 /* Cachable.swift */,
@@ -311,7 +317,6 @@
 				30CD112119EE5D4F7708C31A /* Pods-LoginForm.debug.xcconfig */,
 				27A58FDE1E36F303225F8571 /* Pods-LoginForm.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -475,6 +480,7 @@
 				55A489D8251CCEA9002A4CF1 /* Session.swift in Sources */,
 				55E75039252A48C200FDFD71 /* LocalUser+CoreDataClass.swift in Sources */,
 				55285E8925285F73005838F5 /* CoreDataModel.xcdatamodeld in Sources */,
+				5590EAA8253C640D00F008A7 /* FirebaseService.swift in Sources */,
 				55F3D2B02505396D00F4E5FF /* ImageScrollViewController.swift in Sources */,
 				5590D39E24DC7C6C0035E075 /* FriendPhotosCollectionViewController.swift in Sources */,
 				5581EA6E2524D313000C2BA8 /* Model.swift in Sources */,
@@ -484,6 +490,7 @@
 				5590D39C24DC7C410035E075 /* FriendPhotosCollectionViewCell.swift in Sources */,
 				55B8647624DB244000FCA137 /* UserFriendsTableViewController.swift in Sources */,
 				55528DD125211691004C99B3 /* NetworkService.swift in Sources */,
+				5590EAAA253C647100F008A7 /* StorageServiceInterface.swift in Sources */,
 				55F69C6A2501E95B008C1F63 /* LoadScreenView.swift in Sources */,
 				55C5465E24D2CC5A002D3FFC /* SceneDelegate.swift in Sources */,
 			);
