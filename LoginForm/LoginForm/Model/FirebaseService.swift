@@ -8,16 +8,19 @@
 
 import FirebaseDatabase
 
-class FirebaseService: StorageServiceInterface {
+class FirebaseService {
 
-    func saveHuman(userID: Int, name: String, age: Int) {
-        let referenceChild = Database.database().reference().child("\(userID)")
-        let value: [String : Any] = [
-            "name": name,
-            "age": age
-        ]
+    func saveUser(userID: Int) {
+        let referenceChild = Database.database().reference().child("Users")
+        let value = userID
         
-        referenceChild.childByAutoId().setValue(value)
+        referenceChild.setValue(value)
 }
+    func saveUserFriends(userID:Int, friendIDs:[Int]) {
+        let referenceChild = Database.database().reference().child("Users")
+        let value: [Int] = friendIDs
+        
+        referenceChild.child("\(userID)").setValue(friendIDs)
+    }
 
 }

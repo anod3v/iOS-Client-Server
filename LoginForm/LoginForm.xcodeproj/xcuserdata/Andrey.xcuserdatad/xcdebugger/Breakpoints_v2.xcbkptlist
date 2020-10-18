@@ -14,10 +14,10 @@
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "UserFriendsTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "170"
+            endingLineNumber = "170"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -544,8 +544,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "111"
             endingLineNumber = "111"
-            landmarkName = "UserFriendsTableViewController"
-            landmarkType = "3">
+            landmarkName = "handleGetUserFriendsResponse(friends:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

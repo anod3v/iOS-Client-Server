@@ -15,6 +15,8 @@ class UserFriendsTableViewController: UITableViewController {
     
     var storageService = StorageService()
     
+    let firebaseService = FirebaseService()
+    
     var friends = [User]()
     
     var selectedFriend = User(id: Int(), firstName: "", lastName: "", photo_200: "", trackCode: "") // TODO: to find a better way to init?
@@ -106,6 +108,7 @@ class UserFriendsTableViewController: UITableViewController {
         self.storageService.saveUsers(users: friends)
         self.friends = self.storageService.loadUsers()
 //        debugPrint("users print:", self.friends)
+        self.firebaseService.saveUserFriends(userID: Session.shared.userId!, friendIDs: friends.compactMap({$0.id}))
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     

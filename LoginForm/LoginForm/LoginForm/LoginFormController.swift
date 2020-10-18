@@ -16,7 +16,7 @@ class LoginFormController: UIViewController {
     
     var networkService = NetworkService()
     
-    let service: StorageServiceInterface = FirebaseService()
+    let firebaseService = FirebaseService()
     
     
     override func viewDidLoad() {
@@ -75,7 +75,7 @@ extension LoginFormController: WKNavigationDelegate {
         
         singInAnonymouslyToFirebase() { [unowned self] in
             
-            self.service.saveHuman(userID: Session.shared.userId!, name: "Oleg", age: 22)
+            self.firebaseService.saveUser(userID: Session.shared.userId!)
         
             let userFriendsVC = self.storyboard?.instantiateViewController(withIdentifier: "UserFriendsTableViewController") as! UserFriendsTableViewController
         
