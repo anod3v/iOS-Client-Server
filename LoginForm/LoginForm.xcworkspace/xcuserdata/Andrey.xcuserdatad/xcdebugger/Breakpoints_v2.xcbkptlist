@@ -40,14 +40,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A41FB0C-EA15-4017-AFB2-B32C4D63BCBE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginForm/UserFriends/UserFriendsTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "handleGetUserFriendsResponse(friends:)"
             landmarkType = "7">
          </BreakpointContent>
