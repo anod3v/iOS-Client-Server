@@ -108,7 +108,8 @@ class UserFriendsTableViewController: UITableViewController {
         self.storageService.saveUsers(users: friends)
         self.friends = self.storageService.loadUsers()
 //        debugPrint("users print:", self.friends)
-        self.firebaseService.saveUserFriends(userID: Session.shared.userId!, friendIDs: friends.compactMap({$0.id}))
+//        self.firebaseService.saveUserFriends(userID: Session.shared.userId!, friendIDs: friends.compactMap({$0.id}))
+        self.firebaseService.saveUserFriends(userID: Session.shared.userId!, friends: friends)
         DispatchQueue.main.async { self.tableView.reloadData() }
     }
     

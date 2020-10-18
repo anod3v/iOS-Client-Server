@@ -16,11 +16,18 @@ class FirebaseService {
         
         referenceChild.setValue(value)
 }
-    func saveUserFriends(userID:Int, friendIDs:[Int]) {
+    func saveUserFriends(userID:Int, friends:[User]) {
         let referenceChild = Database.database().reference().child("Users")
-        let value: [Int] = friendIDs
-        
-        referenceChild.child("\(userID)").child("user's friends IDs").setValue(friendIDs)
+        var values = [[String : Any]]()
+        for friend in friends {
+        let value: [String : Any] = [
+            "id" : friend.id,
+            "firstName" : friend.firstName,
+            "lastName" : friend.lastName
+            ]
+            values.append(value)
+        }
+        referenceChild.child("\(userID)").child("user's friends").setValue(values)
     }
 
 }
