@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "033D5C70-63EE-459E-B262-43E8EEEEE469"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A0A286E-7103-4C98-8BA4-B92B021FD53F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "getNewsFeedItems(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DED3BF6-15C1-4D3C-A139-488AD34F3BA6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "getNewsFeedItems(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D6B83560-A131-485B-B222-4406C6F1EB5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "278"
+            endingLineNumber = "278"
+            landmarkName = "getNewsFeedItems(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DB37D17-F5DF-4C13-8C53-B90EBBB4D9C8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "Welcome"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "22F5F518-529E-4E13-98D7-BA52149B07C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "Response"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "22F5F518-529E-4E13-98D7-BA52149B07C2 - 353e3e81aaaa3408"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Response.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Response.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "22F5F518-529E-4E13-98D7-BA52149B07C2 - 5486793545993369"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Response.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "152">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DE61C938-4366-4D1F-A9EE-0B465A67B1EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "Group"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "DE61C938-4366-4D1F-A9EE-0B465A67B1EA - 2908852b3e763ed2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Group.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Group.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "DE61C938-4366-4D1F-A9EE-0B465A67B1EA - 7bc75fa687012d2e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Group.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F222F6AC-6525-4A7C-8E16-3EBE68E48966"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "Item"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "F222F6AC-6525-4A7C-8E16-3EBE68E48966 - 3b7d77c2bb98acd0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Item.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Item.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "F222F6AC-6525-4A7C-8E16-3EBE68E48966 - 9168cbeaeb6012ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Item.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3D598E2-1E12-46AA-8826-366103007977"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "Comments"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "A3D598E2-1E12-46AA-8826-366103007977 - 5459d53f62bc44da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Comments.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Comments.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "A3D598E2-1E12-46AA-8826-366103007977 - 5f0cfb5de4392572"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Comments.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "85">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3D88DC5-981E-4BE0-BC90-53FD01EEE2CC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "124"
+            endingLineNumber = "124"
+            landmarkName = "Likes"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "D3D88DC5-981E-4BE0-BC90-53FD01EEE2CC - 35e3fa338d5a05bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Likes.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Likes.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "D3D88DC5-981E-4BE0-BC90-53FD01EEE2CC - 5629f458e80abc03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Likes.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "877B714F-4047-4241-8261-0291244C1093"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
+            landmarkName = "Reposts"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "877B714F-4047-4241-8261-0291244C1093 - b87a880c7b2441fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Reposts.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Reposts.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "877B714F-4047-4241-8261-0291244C1093 - 75e3e3afc8cbdb09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Reposts.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C816372-0242-462B-BDEA-090C7EA2CA35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "146"
+            endingLineNumber = "146"
+            landmarkName = "Views"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB3547ED-EED1-4A83-BE03-56297918B7E6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "Profile"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "BB3547ED-EED1-4A83-BE03-56297918B7E6 - 5e238375fda261ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Profile.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.Profile.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "BB3547ED-EED1-4A83-BE03-56297918B7E6 - 22a839081dcbee8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.Profile.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "162"
+                  endingLineNumber = "162"
+                  offsetFromSymbolStart = "91">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C8E1672-1925-4A2D-B403-303268FF1C2A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NewsFeedNetworkResponse.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "OnlineInfo"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "9C8E1672-1925-4A2D-B403-303268FF1C2A - 244342cbe4c5b019"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.OnlineInfo.CodingKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;VKgram.OnlineInfo.CodingKeys&gt;"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "9C8E1672-1925-4A2D-B403-303268FF1C2A - 8333ad165c83cd05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VKgram.OnlineInfo.CodingKeys.rawValue.getter : Swift.String"
+                  moduleName = "VKgram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/apple/Library/Mobile%20Documents/com~apple~CloudDocs/Desktop/Geekbrains/9.%20VKgram/Git/VKgram/VKgram/Model/NewsFeedNetworkResponse.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "181"
+                  endingLineNumber = "181"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44E5DE8C-A3DD-418F-AA1F-72D98E65E59C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "getNewsFeedItems(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "32450ED7-0C76-4AB6-8810-4C5E623F729A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VKgram/Model/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "248"
+            endingLineNumber = "248"
+            landmarkName = "getNewsFeedItems(callback:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
